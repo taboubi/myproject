@@ -33250,6 +33250,18 @@ page-login .scroll-content ion-grid ion-row form [login-button] {
   margin: 0;
 }
 
+page-signup .item-input [error-field].label-md {
+  text-align: right;
+  color: #f53d3d !important;
+  font-size: 1.2rem;
+}
+
+page-signup .item-datetime [error-field].label-md {
+  text-align: right;
+  color: #f53d3d !important;
+  font-size: 1.2rem;
+}
+
 page-tutorial .toolbar-background {
   background: transparent;
   border-color: transparent;

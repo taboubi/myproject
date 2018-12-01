@@ -2,6 +2,7 @@
   "NAME": "Nom",
   "PASSWORD": "Mot de passe",
   "EMAIL": "E-mail",
+  "USERNAME": "Nom d'utilisateur",
   "LOGIN": "Connexion",
   "SIGNUP": "Inscription",
 
@@ -32,6 +33,13 @@
   "TRAININGS": "Formations",
   "REFERENCELETTER": "Lettre de référence",
   "LOGOUT": "Déconnexion",
+  "NOTACTIVE": "Votre compte n'est pas encore activé",
+  "INVALIDEMAIL" : "Email incorrecte",
+  "EMAILEXIST" : "Cet Email existe déjà",
+  "USERNAMEEXIST" : "Ce nom d'utilisateur existe déjà",
+  "REGULAREVENTS" : "Événements réguliers",
+  "SPECIALEVENTS" : "Événements spéciaux",
+  "SENIOREVENTS" : "Services aux aînés",
 
   "SETTINGS_PAGE_PROFILE": "Modifier le profil",
 
@@ -56,6 +64,16 @@
   "SIGNUP_BUTTON": "Inscription",
   "SUBSCRIPTION": "Inscription",
   "SEND_NEW_REQUEST":"Envoyer une nouvelle demande",
+  "NEW_NOTIFICATION": "Nouvelle notification",
+  "IGNORE": "Ignorer",
+  "VIEW": "Afficher",
+  "FIRSTNAME": "Prénom",
+  "LASTNAME": "Nom",
+  "PHONE": "Numéro de téléphone",
+  "ADRESS": "Adresse",
+  "CITY": "Ville",
+  "ZIPCODE": "Code postal",
+  "BIRTHDAY": "Date d'anniverssaire",
 
   "LIST_MASTER_TITLE": "Items",
 

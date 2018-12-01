@@ -83,8 +83,9 @@ var LoginPage = /** @class */ (function () {
             username: null,
             password: null
         };
-        this.translateService.get('LOGIN_ERROR').subscribe(function (value) {
-            _this.loginErrorString = value;
+        this.translateService.get(['LOGIN_ERROR', 'NOTACTIVE']).subscribe(function (value) {
+            _this.loginErrorString = value.LOGIN_ERROR;
+            _this.loginNotActive = value.NOTACTIVE;
         });
     }
     // Attempt to login in through our User service
@@ -99,7 +100,19 @@ var LoginPage = /** @class */ (function () {
         });
         loading.present();
         this.user.login(this.account).subscribe(function (resp) {
-            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4____["b" /* MainPage */]);
+            if (resp.enabled === true) {
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4____["b" /* MainPage */]);
+            }
+            else {
+                var toast = _this.toastCtrl.create({
+                    message: _this.loginNotActive,
+                    duration: 8000,
+                    position: 'bottom',
+                    showCloseButton: true,
+                    closeButtonText: "X"
+                });
+                toast.present();
+            }
         }, function (err) {
             //this.navCtrl.push(MainPage);
             // Unable to log in
@@ -127,6 +140,9 @@ var LoginPage = /** @class */ (function () {
         }
         return this.isPasswordValid && this.isUsernameValid;
     };
+    LoginPage.prototype.register = function () {
+        this.navCtrl.push('SignupPage');
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
         __metadata("design:type", Object)
@@ -137,7 +153,7 @@ var LoginPage = /** @class */ (function () {
     ], LoginPage.prototype, "events", void 0);
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\login\login.html"*/'<ion-header>\n\n\n\n    <ion-navbar>\n\n      <ion-title>{{ \'LOGIN_TITLE\' | translate }}</ion-title>\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n<ion-content  background-size [ngStyle]="{\'background-image\': \'url(../assets/images/background/39.jpg)\'}">\n\n    <ion-grid >\n\n      <ion-row align-items-center>\n\n        <ion-col padding-horizontal col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n          <button ion-button button-clear text-capitalize clear float-right no-padding (click)="onEvent(\'onForgot\')">{{\'FORGOTTEN_PASSWORD\' | translate}}</button>\n\n        </ion-col>\n\n        <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n          <ion-item transparent no-lines no-padding margin-top>\n\n            <!---Logo-->\n\n            <img box-shadow item-start margin src="assets/images/logo/1.png">\n\n            <!---Logo Subtitle-->\n\n            <h2 login-subtitle>Faire bouger la communauté!</h2>\n\n            <!---Logo Title-->\n\n            <h1 ion-text login-title no-margin text-wrap>Simple comme bonjour!</h1>\n\n          </ion-item>\n\n          <!---Form-->\n\n          <form padding-horizontal (submit)="doLogin()" >\n\n            <!---Input field username-->\n\n            <ion-item margin-top transparent>\n\n              <ion-label stacked>{{ \'Email\' | translate }}</ion-label>\n\n              <ion-input required type="text" placeholder="{{ \'Email\' | translate }}" [(ngModel)]="account.username" name="username" [ngModelOptions]="{standalone: true}"></ion-input>\n\n              <ion-label error-field no-margin  *ngIf="!isUsernameValid">{{\'REQUIRED_FIELD\' | translate}}</ion-label>\n\n            </ion-item>\n\n            <!---Input field password-->\n\n            <ion-item transparent>\n\n              <ion-label stacked>{{ \'PASSWORD\' | translate }}</ion-label>\n\n              <ion-input required type="password" placeholder="{{ \'PASSWORD\' | translate }}" [(ngModel)]="account.password" name="password" [ngModelOptions]="{standalone: true}"></ion-input>\n\n              <ion-label error-field no-margin *ngIf="!isPasswordValid">{{\'REQUIRED_FIELD\' | translate}}</ion-label>\n\n            </ion-item>\n\n            <!---Login button-->\n\n            <button ion-button default-button full text-uppercase box-shadow >{{ \'LOGIN_BUTTON\' | translate }}</button>\n\n\n\n            <!-- Button Register Now-->\n\n            <div description text-center>\n\n              <p>Don\'t have account? <a text-capitalize (click)="onEvent(\'onRegister\')">data.register</a></p>\n\n            </div>\n\n          </form>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\login\login.html"*/
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\login\login.html"*/'<ion-header>\n\n\n\n    <ion-navbar>\n\n      <ion-title>{{ \'LOGIN_TITLE\' | translate }}</ion-title>\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n<ion-content  background-size [ngStyle]="{\'background-image\': \'url(../assets/images/background/39.jpg)\'}">\n\n    <ion-grid >\n\n      <ion-row align-items-center>\n\n        <ion-col padding-horizontal col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n          <button ion-button button-clear text-capitalize clear float-right no-padding (click)="onEvent(\'onForgot\')">{{\'FORGOTTEN_PASSWORD\' | translate}}</button>\n\n        </ion-col>\n\n        <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n          <ion-item transparent no-lines no-padding margin-top>\n\n            <!---Logo-->\n\n            <img box-shadow item-start margin src="assets/images/logo/1.png">\n\n            <!---Logo Subtitle-->\n\n            <h2 login-subtitle>Faire bouger la communauté!</h2>\n\n            <!---Logo Title-->\n\n            <h1 ion-text login-title no-margin text-wrap>Simple comme bonjour!</h1>\n\n          </ion-item>\n\n          <!---Form-->\n\n          <form padding-horizontal (submit)="doLogin()" >\n\n            <!---Input field username-->\n\n            <ion-item margin-top transparent>\n\n              <ion-label stacked>{{ \'Email\' | translate }}</ion-label>\n\n              <ion-input required type="text" placeholder="{{ \'Email\' | translate }}" [(ngModel)]="account.username" name="username" [ngModelOptions]="{standalone: true}"></ion-input>\n\n              <ion-label error-field no-margin  *ngIf="!isUsernameValid">{{\'REQUIRED_FIELD\' | translate}}</ion-label>\n\n            </ion-item>\n\n            <!---Input field password-->\n\n            <ion-item transparent>\n\n              <ion-label stacked>{{ \'PASSWORD\' | translate }}</ion-label>\n\n              <ion-input required type="password" placeholder="{{ \'PASSWORD\' | translate }}" [(ngModel)]="account.password" name="password" [ngModelOptions]="{standalone: true}"></ion-input>\n\n              <ion-label error-field no-margin *ngIf="!isPasswordValid">{{\'REQUIRED_FIELD\' | translate}}</ion-label>\n\n            </ion-item>\n\n            <!---Login button-->\n\n            <button ion-button default-button full text-uppercase box-shadow >{{ \'LOGIN_BUTTON\' | translate }}</button>\n\n\n\n            <!-- Button Register Now-->\n\n            <div description text-center>\n\n              <p>Don\'t have account? <a text-capitalize (click)="register()">data.register</a></p>\n\n            </div>\n\n          </form>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\login\login.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* Nav */],
             __WEBPACK_IMPORTED_MODULE_3__providers__["d" /* User */],
