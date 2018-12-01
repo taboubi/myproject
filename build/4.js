@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 477:
+/***/ 476:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup__ = __webpack_require__(493);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,7 +44,7 @@ var SignupPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 494:
+/***/ 493:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72,7 +72,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var SignupPage = /** @class */ (function () {
-    function SignupPage(navCtrl, user, toastCtrl, translateService, storage, settings, api, device) {
+    function SignupPage(navCtrl, user, toastCtrl, translateService, storage, settings, api, device, alertCtrl) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.user = user;
@@ -82,6 +82,7 @@ var SignupPage = /** @class */ (function () {
         this.settings = settings;
         this.api = api;
         this.device = device;
+        this.alertCtrl = alertCtrl;
         // The account fields for the login form.
         // If you're using the username field with or without email, make
         // sure to add it to the type
@@ -148,6 +149,15 @@ var SignupPage = /** @class */ (function () {
             data.lang = this.lang;
             data.pushid = this.pushid;
             data.platform = this.device.platform;
+            var confirmAlert = this.alertCtrl.create({
+                title: 'notif',
+                message: JSON.stringify(data),
+                buttons: [{
+                        text: 'Ignorer',
+                        role: 'cancel'
+                    }]
+            });
+            confirmAlert.present();
             var seq = this.api.post('subscribe', data).share();
             seq.subscribe(function (res) {
                 if (res.error == true) {
@@ -226,6 +236,7 @@ var SignupPage = /** @class */ (function () {
             this.isAdressValid &&
             this.isFirstnameValid &&
             this.isLastnameValid &&
+            this.isBirthdayValid &&
             this.isPhoneValid;
     };
     SignupPage.prototype.changeLanguage = function (lang) {
@@ -255,7 +266,8 @@ var SignupPage = /** @class */ (function () {
             __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
             __WEBPACK_IMPORTED_MODULE_4__providers__["c" /* Settings */],
             __WEBPACK_IMPORTED_MODULE_4__providers__["a" /* Api */],
-            __WEBPACK_IMPORTED_MODULE_5__ionic_native_device__["a" /* Device */]])
+            __WEBPACK_IMPORTED_MODULE_5__ionic_native_device__["a" /* Device */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */]])
     ], SignupPage);
     return SignupPage;
 }());
