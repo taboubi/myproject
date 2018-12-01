@@ -49,7 +49,6 @@
         <resource-file src="resources/android/notification/drawable-xxhdpi-icon.png" target="app/src/main/res/drawable-xxhdpi/icon.png" />
         <resource-file src="resources/android/notification/drawable-xxxhdpi-icon.png" target="app/src/main/res/drawable-xxxhdpi/icon.png" />
         <resource-file src="resources/android/notification/drawable-xhdpi-icon.png" target="app/src/main/res/drawable/icon.png" />
-        <resource-file src="google-services.json" target="app/google-services.json" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
