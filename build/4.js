@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 476:
+/***/ 477:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup__ = __webpack_require__(494);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,7 +44,7 @@ var SignupPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 493:
+/***/ 494:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -147,33 +147,38 @@ var SignupPage = /** @class */ (function () {
         if (valid) {
             var data = this.account;
             data.lang = this.lang;
-            data.pushid = this.pushid;
             data.platform = this.device.platform;
-            var confirmAlert = this.alertCtrl.create({
-                title: 'notif',
-                message: JSON.stringify(data),
-                buttons: [{
-                        text: 'Ignorer',
-                        role: 'cancel'
-                    }]
-            });
-            confirmAlert.present();
-            var seq = this.api.post('subscribe', data).share();
-            seq.subscribe(function (res) {
-                if (res.error == true) {
-                    if (res.message == 'emailexist') {
-                        _this.errorEmail = _this.errorEmailexist;
-                        _this.isEmailValid = false;
-                    }
-                    if (res.message == 'usernameexist') {
-                        _this.errorUsername = _this.errorUsernameexist;
-                        _this.isUsernameValid = false;
-                    }
+            this.storage.get('pushid')
+                .then(function (pushid) {
+                if (pushid !== null) {
+                    data.pushid = pushid;
+                    var confirmAlert = _this.alertCtrl.create({
+                        title: 'notif',
+                        message: JSON.stringify(data),
+                        buttons: [{
+                                text: 'Ignorer',
+                                role: 'cancel'
+                            }]
+                    });
+                    confirmAlert.present();
                 }
-                else {
-                }
-            }, function (err) {
-                console.error('ERROR', err);
+                var seq = _this.api.post('subscribe', data).share();
+                seq.subscribe(function (res) {
+                    if (res.error == true) {
+                        if (res.message == 'emailexist') {
+                            _this.errorEmail = _this.errorEmailexist;
+                            _this.isEmailValid = false;
+                        }
+                        if (res.message == 'usernameexist') {
+                            _this.errorUsername = _this.errorUsernameexist;
+                            _this.isUsernameValid = false;
+                        }
+                    }
+                    else {
+                    }
+                }, function (err) {
+                    console.error('ERROR', err);
+                });
             });
         }
     };
