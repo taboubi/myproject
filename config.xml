@@ -43,6 +43,13 @@
         <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
         <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
+        <resource-file src="resources/android/notification/drawable-hdpi-icon.png" target="app/src/main/res/drawable-hdpi/icon.png" />
+        <resource-file src="resources/android/notification/drawable-mdpi-icon.png" target="app/src/main/res/drawable-mdpi/icon.png" />
+        <resource-file src="resources/android/notification/drawable-xhdpi-icon.png" target="app/src/main/res/drawable-xhdpi/icon.png" />
+        <resource-file src="resources/android/notification/drawable-xxhdpi-icon.png" target="app/src/main/res/drawable-xxhdpi/icon.png" />
+        <resource-file src="resources/android/notification/drawable-xxxhdpi-icon.png" target="app/src/main/res/drawable-xxxhdpi/icon.png" />
+        <resource-file src="resources/android/notification/drawable-xhdpi-icon.png" target="app/src/main/res/drawable/icon.png" />
+        <resource-file src="google-services.json" target="app/google-services.json" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
