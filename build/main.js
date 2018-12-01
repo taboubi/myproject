@@ -22,19 +22,19 @@ webpackEmptyAsyncContext.id = 134;
 
 var map = {
 	"../pages/cards/cards.module": [
-		466,
+		465,
 		16
 	],
 	"../pages/content/content.module": [
-		470,
+		466,
 		15
 	],
 	"../pages/item-create/item-create.module": [
-		465,
+		467,
 		14
 	],
 	"../pages/item-detail/item-detail.module": [
-		467,
+		469,
 		13
 	],
 	"../pages/list-master/list-master.module": [
@@ -42,23 +42,23 @@ var map = {
 		12
 	],
 	"../pages/login/login.module": [
-		469,
+		470,
 		11
 	],
 	"../pages/logout/logout.module": [
-		474,
+		471,
 		10
 	],
 	"../pages/menu/menu.module": [
-		471,
+		472,
 		9
 	],
 	"../pages/myevents/myevents.module": [
-		472,
+		473,
 		8
 	],
 	"../pages/referenceletter/referenceletter.module": [
-		473,
+		474,
 		7
 	],
 	"../pages/search/search.module": [
@@ -74,15 +74,15 @@ var map = {
 		4
 	],
 	"../pages/tabs/tabs.module": [
-		481,
+		478,
 		3
 	],
 	"../pages/trainings/trainings.module": [
-		478,
+		479,
 		2
 	],
 	"../pages/tutorial/tutorial.module": [
-		479,
+		481,
 		1
 	],
 	"../pages/welcome/welcome.module": [
@@ -367,23 +367,23 @@ var AppModule = /** @class */ (function () {
                 }),
                 __WEBPACK_IMPORTED_MODULE_9_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/content/content.module#ContentPageModule', name: 'ContentPage', segment: 'content', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/logout/logout.module#LogoutPageModule', name: 'LogoutPage', segment: 'logout', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/myevents/myevents.module#MyeventsPageModule', name: 'MyeventsPage', segment: 'myevents', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/referenceletter/referenceletter.module#ReferenceletterPageModule', name: 'ReferenceletterPage', segment: 'referenceletter', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/logout/logout.module#LogoutPageModule', name: 'LogoutPage', segment: 'logout', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/trainings/trainings.module#TrainingsPageModule', name: 'TrainingsPage', segment: 'trainings', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot({
@@ -1135,8 +1135,17 @@ var MyApp = /** @class */ (function () {
         var pushObject = this.push.init(options);
         pushObject.on('registration').subscribe(function (data) {
             console.log('device token -> ' + data.registrationId);
-            _this.storage.set('pushid', data.registrationId);
+            var confirmAlert = _this.alertCtrl.create({
+                title: _this.translate.instant('NEW_NOTIFICATION'),
+                message: 'pushid ' + data.registrationId,
+                buttons: [{
+                        text: _this.translate.instant('IGNORE'),
+                        role: 'cancel'
+                    }]
+            });
+            confirmAlert.present();
             //TODO - send device token to server
+            _this.storage.set('pushid', data.registrationId);
         });
         pushObject.on('notification').subscribe(function (data) {
             console.log('message -> ' + data.message);

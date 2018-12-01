@@ -114,13 +114,6 @@ var SignupPage = /** @class */ (function () {
         this.isBirthdayValid = true;
         this.regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         this.lang = null;
-        this.pushid = null;
-        this.storage.get('pushid')
-            .then(function (pushid) {
-            if (pushid) {
-                _this.pushid = pushid;
-            }
-        });
         this.storage.get('_settings')
             .then(function (settings) {
             if (settings == null) {
