@@ -72,7 +72,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var SignupPage = /** @class */ (function () {
-    function SignupPage(navCtrl, user, toastCtrl, translateService, storage, settings, api, device, alertCtrl) {
+    function SignupPage(navCtrl, user, toastCtrl, translateService, storage, settings, api, device, alertCtrl, loadingCtrl) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.user = user;
@@ -83,6 +83,7 @@ var SignupPage = /** @class */ (function () {
         this.api = api;
         this.device = device;
         this.alertCtrl = alertCtrl;
+        this.loadingCtrl = loadingCtrl;
         // The account fields for the login form.
         // If you're using the username field with or without email, make
         // sure to add it to the type
@@ -141,19 +142,15 @@ var SignupPage = /** @class */ (function () {
             var data = this.account;
             data.lang = this.lang;
             data.platform = this.device.platform;
+            var loading_1 = this.loadingCtrl.create({
+                spinner: 'hide',
+                content: "<img src=\"assets/svg/bars.svg\" width=\"100%\"/>"
+            });
+            loading_1.present();
             this.storage.get('pushid')
                 .then(function (pushid) {
                 if (pushid !== null) {
                     data.pushid = pushid;
-                    var confirmAlert = _this.alertCtrl.create({
-                        title: 'notif',
-                        message: JSON.stringify(data),
-                        buttons: [{
-                                text: 'Ignorer',
-                                role: 'cancel'
-                            }]
-                    });
-                    confirmAlert.present();
                 }
                 var seq = _this.api.post('subscribe', data).share();
                 seq.subscribe(function (res) {
@@ -168,10 +165,15 @@ var SignupPage = /** @class */ (function () {
                         }
                     }
                     else {
+                        _this.navCtrl.setRoot('LoginPage', {
+                            signup: true
+                        });
                     }
                 }, function (err) {
-                    console.error('ERROR', err);
-                });
+                    //this.navCtrl.push(MainPage);
+                    // Unable to log in
+                    loading_1.dismiss();
+                }, function () { loading_1.dismiss(); });
             });
         }
     };
@@ -255,7 +257,7 @@ var SignupPage = /** @class */ (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\signup\signup.html"*/'<!-- Themes Register + logo -->\n<ion-header>\n  <ion-navbar transparent>\n    <ion-title>{{ \'SIGNUP\' | translate }} \n      <button ion-button text-capitalize button-clear clear float-right no-padding *ngIf="lang == \'fr\'" (click)="changeLanguage(\'en\')">English</button>\n      <button ion-button text-capitalize button-clear clear float-right no-padding *ngIf="lang == \'en\'" (click)="changeLanguage(\'fr\')">Français</button>\n    </ion-title>\n    \n  </ion-navbar>\n</ion-header>\n<!--Content -->\n<ion-content background-size [ngStyle]="{\'background-image\': \'url(../assets/images/background/39.jpg)\'}">\n        <form padding-horizontal (submit)="doSignup()">\n          <!---Input field firstname-->\n          <ion-item transparent>\n              <ion-label stacked>{{ \'FIRSTNAME\' | translate }}</ion-label>\n              <ion-input required placeholder="{{ \'FIRSTNAME\' | translate }}" type="text" required [(ngModel)]="account.firstname" name="firstname"></ion-input>\n              <ion-label error-field no-margin *ngIf="!isFirstnameValid">{{ mandatory }}</ion-label>\n            </ion-item>\n          <!---Input field lastname-->\n          <ion-item transparent>\n              <ion-label stacked>{{ \'LASTNAME\' | translate }}</ion-label>\n              <ion-input required placeholder="{{ \'LASTNAME\' | translate }}" type="text"  required [(ngModel)]="account.lastname" name="lastname"></ion-input>\n              <ion-label error-field no-margin *ngIf="!isLastnameValid">{{ mandatory }}</ion-label>\n            </ion-item>\n          <!---Input field email-->\n          <ion-item transparent>\n              <ion-label stacked>{{ \'EMAIL\' | translate }}</ion-label>\n              <ion-input required placeholder="{{ \'EMAIL\' | translate }}" type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" name="email" required [(ngModel)]="account.email" [ngModelOptions]="{standalone: true}"></ion-input>\n              <ion-label error-field no-margin *ngIf="!isEmailValid">{{ errorEmail }}</ion-label>\n            </ion-item>\n          <!---Input field username-->\n          <ion-item transparent>\n            <ion-label stacked>{{ \'USERNAME\' | translate }}</ion-label>\n            <ion-input required placeholder="{{ \'USERNAME\' | translate }}" type="text" [(ngModel)]="account.username" name="username" [ngModelOptions]="{standalone: true}"></ion-input>\n            <ion-label error-field no-margin *ngIf="!isUsernameValid">{{ errorUsername }}</ion-label>\n          </ion-item>\n          <!---Input field password-->\n          <ion-item transparent>\n            <ion-label stacked>{{ \'PASSWORD\' | translate }}</ion-label>\n            <ion-input required placeholder="{{ \'USERNAME\' | translate }}" type="password" [(ngModel)]="account.password" name="password" [ngModelOptions]="{standalone: true}"></ion-input>\n            <ion-label error-field no-margin *ngIf="!isPasswordValid">{{ mandatory }}</ion-label>\n          </ion-item>\n          <!---Input field phone-->\n          <ion-item transparent>\n            <ion-label stacked>{{ \'PHONE\' | translate }}</ion-label>\n            <ion-input required type="number"  required [(ngModel)]="account.phone" name="phone"></ion-input>\n            <ion-label error-field no-margin *ngIf="!isPhoneValid">{{ mandatory }}</ion-label>\n          </ion-item>\n          <!---Input field birthday-->\n          <ion-item transparent>\n            <ion-label stacked>{{ \'BIRTHDAY\' | translate }}</ion-label>\n            <ion-datetime required   [(ngModel)]="account.birthday" name="birthday"></ion-datetime>\n            <ion-label error-field no-margin *ngIf="!isBirthdayValid">{{ mandatory }}</ion-label>\n          </ion-item>\n          <!---Input field country-->\n          <ion-item transparent>\n            <ion-label stacked>{{ \'ADRESS\' | translate }}</ion-label>\n            <ion-input required placeholder="{{ \'ADRESS\' | translate }}" type="text" required [(ngModel)]="account.adress" name="adress" ></ion-input>\n            <ion-label error-field no-margin *ngIf="!isAdressValid">{{ mandatory }}</ion-label>\n          </ion-item>\n          <!---Input field city-->\n          <ion-item transparent>\n            <ion-input required placeholder="{{ \'CITY\' | translate }}" type="text"  required [(ngModel)]="account.city" name="city" ></ion-input>\n            <ion-input required placeholder="{{ \'ZIPCODE\' | translate }}" type="text"  required [(ngModel)]="account.zipcode" name="zipcode" ></ion-input>\n          </ion-item>\n          <ion-item transparent>\n            <ion-label>{{ \'REGULAREVENTS\' | translate }}</ion-label>\n            <ion-checkbox  checked="true" [(ngModel)]="account.is_regular" name="is_regular" ></ion-checkbox>\n          </ion-item>\n        \n          <ion-item transparent>\n            <ion-label>{{ \'SPECIALEVENTS\' | translate }}</ion-label>\n            <ion-checkbox  checked="true" [(ngModel)]="account.is_special_event" name="is_special_event" ></ion-checkbox>\n          </ion-item>\n        \n          <ion-item transparent>\n            <ion-label>{{ \'SENIOREVENTS\' | translate }}</ion-label>\n            <ion-checkbox checked="true" [(ngModel)]="account.is_senior_service" name="is_senior_service" ></ion-checkbox>\n          </ion-item>\n          <!---Register button-->\n          <div padding>\n            <button ion-button color="light" block>{{ \'SIGNUP_BUTTON\' | translate }}</button>\n          </div>\n        </form>\n</ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\signup\signup.html"*/
+            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\signup\signup.html"*/'<!-- Themes Register + logo -->\n<ion-header>\n  <ion-navbar transparent>\n    <ion-title>\n      <div class="title-elements">\n          {{ \'SIGNUP\' | translate }} \n          <button ion-button text-capitalize button-clear clear float-right no-padding *ngIf="lang == \'fr\'" (click)="changeLanguage(\'en\')">English</button>\n          <button ion-button text-capitalize button-clear clear float-right no-padding *ngIf="lang == \'en\'" (click)="changeLanguage(\'fr\')">Français</button>\n      </div>\n    </ion-title>\n    \n  </ion-navbar>\n</ion-header>\n<!--Content -->\n<ion-content background-size [ngStyle]="{\'background-image\': \'url(../assets/images/background/39.jpg)\'}">\n        <form padding-horizontal (submit)="doSignup()">\n          <!---Input field firstname-->\n          <ion-item transparent>\n              <ion-label stacked>{{ \'FIRSTNAME\' | translate }}</ion-label>\n              <ion-input required placeholder="{{ \'FIRSTNAME\' | translate }}" type="text" required [(ngModel)]="account.firstname" name="firstname"></ion-input>\n              <ion-label error-field no-margin *ngIf="!isFirstnameValid">{{ mandatory }}</ion-label>\n            </ion-item>\n          <!---Input field lastname-->\n          <ion-item transparent>\n              <ion-label stacked>{{ \'LASTNAME\' | translate }}</ion-label>\n              <ion-input required placeholder="{{ \'LASTNAME\' | translate }}" type="text"  required [(ngModel)]="account.lastname" name="lastname"></ion-input>\n              <ion-label error-field no-margin *ngIf="!isLastnameValid">{{ mandatory }}</ion-label>\n            </ion-item>\n          <!---Input field email-->\n          <ion-item transparent>\n              <ion-label stacked>{{ \'EMAIL\' | translate }}</ion-label>\n              <ion-input required placeholder="{{ \'EMAIL\' | translate }}" type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" name="email" required [(ngModel)]="account.email" [ngModelOptions]="{standalone: true}"></ion-input>\n              <ion-label error-field no-margin *ngIf="!isEmailValid">{{ errorEmail }}</ion-label>\n            </ion-item>\n          <!---Input field username-->\n          <ion-item transparent>\n            <ion-label stacked>{{ \'USERNAME\' | translate }}</ion-label>\n            <ion-input required placeholder="{{ \'USERNAME\' | translate }}" type="text" [(ngModel)]="account.username" name="username" [ngModelOptions]="{standalone: true}"></ion-input>\n            <ion-label error-field no-margin *ngIf="!isUsernameValid">{{ errorUsername }}</ion-label>\n          </ion-item>\n          <!---Input field password-->\n          <ion-item transparent>\n            <ion-label stacked>{{ \'PASSWORD\' | translate }}</ion-label>\n            <ion-input required placeholder="{{ \'PASSWORD\' | translate }}" type="password" [(ngModel)]="account.password" name="password" [ngModelOptions]="{standalone: true}"></ion-input>\n            <ion-label error-field no-margin *ngIf="!isPasswordValid">{{ mandatory }}</ion-label>\n          </ion-item>\n          <!---Input field phone-->\n          <ion-item transparent>\n            <ion-label stacked>{{ \'PHONE\' | translate }}</ion-label>\n            <ion-input required type="number"  required [(ngModel)]="account.phone" name="phone"></ion-input>\n            <ion-label error-field no-margin *ngIf="!isPhoneValid">{{ mandatory }}</ion-label>\n          </ion-item>\n          <!---Input field birthday-->\n          <ion-item transparent>\n            <ion-label stacked>{{ \'BIRTHDAY\' | translate }}</ion-label>\n            <ion-datetime required placeholder="{{ \'BIRTHDAY\' | translate }}"  [(ngModel)]="account.birthday" name="birthday"></ion-datetime>\n            <ion-label error-field no-margin *ngIf="!isBirthdayValid">{{ mandatory }}</ion-label>\n          </ion-item>\n          <!---Input field country-->\n          <ion-item transparent>\n            <ion-label stacked>{{ \'ADRESS\' | translate }}</ion-label>\n            <ion-input required placeholder="{{ \'ADRESS\' | translate }}" type="text" required [(ngModel)]="account.adress" name="adress" ></ion-input>\n            <ion-label error-field no-margin *ngIf="!isAdressValid">{{ mandatory }}</ion-label>\n          </ion-item>\n          <!---Input field city-->\n          <ion-item transparent>\n            <ion-input required placeholder="{{ \'CITY\' | translate }}" type="text"  required [(ngModel)]="account.city" name="city" ></ion-input>\n            <ion-input required placeholder="{{ \'ZIPCODE\' | translate }}" type="text"  required [(ngModel)]="account.zipcode" name="zipcode" ></ion-input>\n          </ion-item>\n          <ion-item transparent>\n            <ion-label>{{ \'REGULAREVENTS\' | translate }}</ion-label>\n            <ion-checkbox  checked="true" [(ngModel)]="account.is_regular" name="is_regular" ></ion-checkbox>\n          </ion-item>\n        \n          <ion-item transparent>\n            <ion-label>{{ \'SPECIALEVENTS\' | translate }}</ion-label>\n            <ion-checkbox  checked="true" [(ngModel)]="account.is_special_event" name="is_special_event" ></ion-checkbox>\n          </ion-item>\n        \n          <ion-item transparent>\n            <ion-label>{{ \'SENIOREVENTS\' | translate }}</ion-label>\n            <ion-checkbox checked="true" [(ngModel)]="account.is_senior_service" name="is_senior_service" ></ion-checkbox>\n          </ion-item>\n          <!---Register button-->\n          <div padding>\n            <button ion-button color="light" block>{{ \'SIGNUP_BUTTON\' | translate }}</button>\n          </div>\n        </form>\n</ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\signup\signup.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_4__providers__["d" /* User */],
@@ -265,7 +267,8 @@ var SignupPage = /** @class */ (function () {
             __WEBPACK_IMPORTED_MODULE_4__providers__["c" /* Settings */],
             __WEBPACK_IMPORTED_MODULE_4__providers__["a" /* Api */],
             __WEBPACK_IMPORTED_MODULE_5__ionic_native_device__["a" /* Device */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */]])
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */]])
     ], SignupPage);
     return SignupPage;
 }());

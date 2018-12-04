@@ -34,11 +34,11 @@ var map = {
 		14
 	],
 	"../pages/item-detail/item-detail.module": [
-		469,
+		468,
 		13
 	],
 	"../pages/list-master/list-master.module": [
-		468,
+		469,
 		12
 	],
 	"../pages/login/login.module": [
@@ -82,11 +82,11 @@ var map = {
 		2
 	],
 	"../pages/tutorial/tutorial.module": [
-		481,
+		480,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		480,
+		481,
 		0
 	]
 };
@@ -370,8 +370,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/content/content.module#ContentPageModule', name: 'ContentPage', segment: 'content', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/logout/logout.module#LogoutPageModule', name: 'LogoutPage', segment: 'logout', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
@@ -382,8 +382,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/trainings/trainings.module#TrainingsPageModule', name: 'TrainingsPage', segment: 'trainings', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot({
@@ -1135,15 +1135,6 @@ var MyApp = /** @class */ (function () {
         var pushObject = this.push.init(options);
         pushObject.on('registration').subscribe(function (data) {
             console.log('device token -> ' + data.registrationId);
-            var confirmAlert = _this.alertCtrl.create({
-                title: _this.translate.instant('NEW_NOTIFICATION'),
-                message: 'pushid ' + data.registrationId,
-                buttons: [{
-                        text: _this.translate.instant('IGNORE'),
-                        role: 'cancel'
-                    }]
-            });
-            confirmAlert.present();
             //TODO - send device token to server
             _this.storage.set('pushid', data.registrationId);
         });

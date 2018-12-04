@@ -32917,6 +32917,10 @@ ion-card [card-title] {
   display: -ms-flexbox;
   display: flex;
   display: -webkit-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .link-edit-event {
@@ -32948,7 +32952,16 @@ ion-card [card-title] {
   mix-blend-mode: multiply;
   position: absolute;
   right: 5%;
-  bottom: 25%;
+  top: 120px;
+}
+
+.card {
+  padding-bottom: 7px;
+  min-height: 220px;
+}
+
+.link-edit-event {
+  font-size: 2em;
 }
 
 page-item-create .profile-image-wrapper {
@@ -32979,6 +32992,15 @@ page-item-create .profile-image-wrapper .profile-image-placeholder ion-icon {
   font-size: 44px;
   margin-bottom: -10px;
   margin-top: 10px;
+}
+
+page-item-detail .toolbar-ios ion-title {
+  padding-left: 110px;
+  padding-right: 5px;
+}
+
+page-item-detail .margin-detail {
+  top: 44px;
 }
 
 page-item-detail .item-profile {
@@ -33145,6 +33167,22 @@ page-item-detail .labelperiod {
   padding: 15px;
 }
 
+page-login .title-elements {
+  display: -webkit-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
 page-login .label-ios[stacked],
 page-login .label-md[stacked] {
   font-size: 1.6rem;
@@ -33156,6 +33194,11 @@ page-login [error-field] {
 
 page-login ion-grid ion-row form ion-item .label-md[error-field] {
   color: #f53d3d !important;
+}
+
+page-login .button-full.button-outline {
+  border-right-width: 1px !important;
+  border-left-width: 1px !important;
 }
 
 page-login .scroll-content {
@@ -33260,6 +33303,26 @@ page-signup .item-datetime [error-field].label-md {
   text-align: right;
   color: #f53d3d !important;
   font-size: 1.2rem;
+}
+
+page-signup .title-ios {
+  padding: 1px;
+  padding-left: 90px;
+}
+
+page-signup .title-elements {
+  display: -webkit-flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 page-tutorial .toolbar-background {

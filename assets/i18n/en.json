@@ -70,6 +70,8 @@
   "REGULAREVENTS" : "Regular events",
   "SPECIALEVENTS" : "Special events",
   "SENIOREVENTS" : "Seniors services",
+  "NOACCOUNT": "Don't have account?",
+  "ACCOUNTCREATED": "Your account has been successfully created!",
 
 
   "SETTINGS_PROFILE_BUTTON": "Edit Profile",
