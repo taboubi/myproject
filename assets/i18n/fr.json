@@ -41,6 +41,7 @@
   "SPECIALEVENTS" : "Événements spéciaux",
   "SENIOREVENTS" : "Services aux aînés",
   "NOACCOUNT": "Vous n’avez pas de compte ?",
+  "ACCOUNTCREATED": "Votre compte a été créé avec succès!",
 
   "SETTINGS_PAGE_PROFILE": "Modifier le profil",
 
@@ -68,6 +69,7 @@
   "NEW_NOTIFICATION": "Nouvelle notification",
   "IGNORE": "Ignorer",
   "VIEW": "Afficher",
+  "CLOSE": "Fermer",
   "FIRSTNAME": "Prénom",
   "LASTNAME": "Nom",
   "PHONE": "Numéro de téléphone",
@@ -75,6 +77,12 @@
   "CITY": "Ville",
   "ZIPCODE": "Code postal",
   "BIRTHDAY": "Date d'anniverssaire",
+  "NBHOURS": "Inscrire le nombre d'heures passé sur l'événement",
+  "SAVE": "Enregistrer",
+  "NBHOURS_PLACEHOLDER":"Nombre d'heures",
+  "EDIT_PROFILE": "Modifier mon profil",
+  "UPDATEPASSWORD": "Changer mon mot de passe",
+  "CONTACT": "Nous-joindre",
 
   "LIST_MASTER_TITLE": "Items",
 

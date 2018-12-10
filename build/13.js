@@ -1,6 +1,6 @@
 webpackJsonp([13],{
 
-/***/ 468:
+/***/ 469:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__item_detail__ = __webpack_require__(485);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__item_detail__ = __webpack_require__(487);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -47,7 +47,7 @@ var ItemDetailPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 485:
+/***/ 487:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82,11 +82,15 @@ var ItemDetailPage = /** @class */ (function () {
         this.disabledtg = false;
         this.disabledbtn = false;
         this.classloading = false;
+        this.nb_hours = null;
         if (navParams.get('item')) {
             this.item = navParams.get('item');
             this.cansubscribe = this.item.can_subscribe || this.item.can_modify;
             this.disabledtg = !this.item.can_modify;
             this.disabledbtn = this.disabledtg;
+            if (this.item.nb_hours) {
+                this.nb_hours = this.item.nb_hours;
+            }
             console.log(this.cansubscribe);
             this.loadPeriods();
         }
@@ -150,6 +154,9 @@ var ItemDetailPage = /** @class */ (function () {
             _this.cansubscribe = _this.item.can_subscribe || _this.item.can_modify;
             _this.disabledtg = !_this.item.can_modify;
             _this.disabledbtn = _this.disabledtg;
+            if (_this.item.nb_hours) {
+                _this.nb_hours = _this.item.nb_hours;
+            }
             _this.loadPeriods();
         }, function (err) {
         }, function () { loading.dismiss(); });
@@ -182,9 +189,27 @@ var ItemDetailPage = /** @class */ (function () {
     ItemDetailPage.prototype.isDisabled = function () {
         return this.item.can_modify === false;
     };
+    ItemDetailPage.prototype.sendHours = function () {
+        var _this = this;
+        if (this.nb_hours) {
+            var data = { 'eventid': this.item.id, 'nb_hours': this.nb_hours };
+            var loading_1 = this.loadingCtrl.create({
+                spinner: 'hide',
+                content: "<img src=\"assets/svg/bars.svg\" width=\"100%\"/>"
+            });
+            loading_1.present();
+            var seq = this.api.post('api/nbhours', data).share();
+            seq.subscribe(function (res) {
+                // If the API returned a successful response, mark the user as logged in
+                _this.navCtrl.pop();
+            }, function (err) {
+                console.error('ERROR', err);
+            }, function () { loading_1.dismiss(); });
+        }
+    };
     ItemDetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-item-detail',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\item-detail\item-detail.html"*/'<ion-header>\n    \n  <ion-navbar>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title  *ngIf="item != null">{{ item.title }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding *ngIf="item != null" [class.margin-detail]="classloading">\n    <ion-list>\n    <h3 class="example-h3">{{ item.title }}</h3>\n    <p>{{ item.description }}</p>\n    <h6 ><ion-icon name="information-circle" *ngIf="item.other_informations != null" ></ion-icon> {{ item.other_informations }}</h6>\n    <div class="title-components" text-center></div>\n    <ion-row>\n        <ion-col class="col">\n            <span item-start span-medium><ion-icon name="people" color=\'light\' item-start></ion-icon>{{ \'SUBSCRIPTIONS\' | translate }}</span>\n            <span item-end span-medium small>({{item.subscribers}}/{{item.limit_subscribe}})</span>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n          <ion-col class="col">\n              <span span-medium ><ion-icon name="pin" color=\'light\'></ion-icon>{{item.adress}}</span>\n          </ion-col>\n      </ion-row>\n      <ion-row *ngIf="item.subscribe_status == 2">\n          <ion-col class="col">\n              <span span-medium ><ion-icon name="md-person" color=\'light\'></ion-icon>{{item.fullname_responsible}}</span>\n          </ion-col>\n      </ion-row>\n      <ion-row *ngIf="item.subscribe_status == 2">\n          <ion-col class="col">\n              <span span-medium ><ion-icon name="mail" color=\'light\'></ion-icon>{{item.email}}</span>\n          </ion-col>\n      </ion-row>\n      <ion-row *ngIf="item.subscribe_status == 2">\n          <ion-col class="col">\n              <span span-medium ><ion-icon name="ios-phone-portrait" color=\'light\'></ion-icon>{{item.phone_responsible}} : {{item.phone_post_responsible}}</span>\n          </ion-col>\n      </ion-row>\n      <ion-row *ngIf="item.dates.length > 0" >\n          <ion-col col-12>\n             <ion-icon name="calendar" color="light"></ion-icon> {{ \'DATE_TIME\' | translate }} \n          </ion-col>\n          <div>\n            <ion-row align-items-center   *ngFor="let date of item.dates" >\n                    <ion-col col-6 col-lg-4>\n                        <span class="date-event"> \n                          <ion-icon name="time"></ion-icon>{{ date.start_date | prettydate }}\n                        </span>\n                    </ion-col>\n                    <ion-col col-1 col-lg-4>\n                        <ion-icon name="arrow-forward"></ion-icon>\n                    </ion-col>\n                    <ion-col col-5 col-lg-4>\n                        <span class="date-event"> \n                        {{ date.end_date | prettydate }}\n                      </span>\n                    </ion-col>\n            </ion-row>\n          </div>\n      </ion-row>\n      <ion-row>\n        <ion-col col-8>\n            <ion-icon name="pricetags" color="light"></ion-icon>\n            <span *ngIf="item.typeid == 1" class="badge-custom success-badge">{{ item.type }}</span>\n            <span *ngIf="item.typeid == 2" class="badge-custom blue-light-badge">{{ item.type }}</span>\n            <span *ngIf="item.typeid == 3" class="badge-custom dark-badge">{{ item.type }}</span>\n        </ion-col>\n      </ion-row>\n      <ion-grid no-padding>\n          <form padding-horizontal (submit)="sendSubscription()" >\n          <div class="title-components">{{ \'SUBSCRIPTION\' | translate }}\n              <span *ngIf="item.subscribe_status == 0 && item.subscribe_status !== false" class="badge-custom danger-badge display-flex subscribe-badge"><ion-icon name="close-circle"></ion-icon>{{  \'STATUS_REFUSED\' | translate }}</span>\n              <span *ngIf="item.subscribe_status == 2" class="badge-custom success-badge display-flex subscribe-badge"><ion-icon name="checkmark-circle" color="secondary"></ion-icon>{{  \'STATUS_APPROVED\' | translate }}</span>\n              <span *ngIf="item.subscribe_status == 1" class="badge-custom waiting-badge display-flex subscribe-badge"><ion-icon name="ios-timer-outline"></ion-icon>{{  \'STATUS_WAITING\' | translate }}</span>\n\n          </div>\n          <!-- List Section -->\n          <ion-list no-lines >\n            <ion-item lines *ngFor="let date of periods">\n              <!-- Toggle -->\n              <ion-toggle color="secondary" item-start (ionChange)="togglePeriod(date.id_period)" checked="{{ date.subscribed }}" [disabled]="isDisabled()"></ion-toggle>\n              <!-- Item-subtitle -->\n              <ion-label item-subtitle>{{ date.label }}</ion-label>\n              <!-- Item-title -->\n              <ion-label item-title class="labelperiod">{{ date.start_date | prettydate }} <ion-icon name="arrow-forward"></ion-icon> {{ date.end_date | prettydate }}</ion-label>\n            </ion-item>\n            <ion-item  *ngIf="item.subscribe_status === false">\n              <button ion-button full text-uppercase box-shadow color="secondary"   [disabled]="isDisabled()" >{{ \'SUBSCRIBE\' | translate }}</button>\n            </ion-item>\n            <ion-item  *ngIf="item.subscribe_status !== false">\n              <button ion-button full text-uppercase box-shadow color="secondary"  [disabled]="isDisabled()" >{{ \'MODIFY\' | translate }}</button>\n            </ion-item>\n          </ion-list>\n        </form>\n      </ion-grid>\n    </ion-list>\n</ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\item-detail\item-detail.html"*/
+            selector: 'page-item-detail',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\item-detail\item-detail.html"*/'<ion-header>\n    \n  <ion-navbar>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title  *ngIf="item != null">{{ item.title }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding *ngIf="item != null" [class.margin-detail]="classloading">\n    <ion-list>\n    <h3 class="example-h3">{{ item.title }}</h3>\n    <p>{{ item.description }}</p>\n    <h6 ><ion-icon name="information-circle" *ngIf="item.other_informations != null" ></ion-icon> {{ item.other_informations }}</h6>\n    <div class="title-components" text-center></div>\n    <ion-row>\n        <ion-col class="col">\n            <span item-start span-medium><ion-icon name="people" color=\'light\' item-start></ion-icon>{{ \'SUBSCRIPTIONS\' | translate }}</span>\n            <span item-end span-medium small>({{item.subscribers}}/{{item.limit_subscribe}})</span>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n          <ion-col class="col">\n              <span span-medium ><ion-icon name="pin" color=\'light\'></ion-icon>{{item.adress}}</span>\n          </ion-col>\n      </ion-row>\n      <ion-row *ngIf="item.subscribe_status == 2">\n          <ion-col class="col">\n              <span span-medium ><ion-icon name="md-person" color=\'light\'></ion-icon>{{item.fullname_responsible}}</span>\n          </ion-col>\n      </ion-row>\n      <ion-row *ngIf="item.subscribe_status == 2">\n          <ion-col class="col">\n              <span span-medium ><ion-icon name="mail" color=\'light\'></ion-icon>{{item.email}}</span>\n          </ion-col>\n      </ion-row>\n      <ion-row *ngIf="item.subscribe_status == 2">\n          <ion-col class="col">\n              <span span-medium ><ion-icon name="ios-phone-portrait" color=\'light\'></ion-icon>{{item.phone_responsible}} : {{item.phone_post_responsible}}</span>\n          </ion-col>\n      </ion-row>\n      <ion-row *ngIf="item.dates.length > 0" >\n          <ion-col col-12>\n             <ion-icon name="calendar" color="light"></ion-icon> {{ \'DATE_TIME\' | translate }} \n          </ion-col>\n          <div>\n            <ion-row align-items-center   *ngFor="let date of item.dates" >\n                    <ion-col col-6 col-lg-4>\n                        <span class="date-event"> \n                          <ion-icon name="time"></ion-icon>{{ date.start_date | prettydate }}\n                        </span>\n                    </ion-col>\n                    <ion-col col-1 col-lg-4>\n                        <ion-icon name="arrow-forward"></ion-icon>\n                    </ion-col>\n                    <ion-col col-5 col-lg-4>\n                        <span class="date-event"> \n                        {{ date.end_date | prettydate }}\n                      </span>\n                    </ion-col>\n            </ion-row>\n          </div>\n      </ion-row>\n      <ion-row>\n        <ion-col col-8>\n            <ion-icon name="pricetags" color="light"></ion-icon>\n            <span *ngIf="item.typeid == 1" class="badge-custom success-badge">{{ item.type }}</span>\n            <span *ngIf="item.typeid == 2" class="badge-custom blue-light-badge">{{ item.type }}</span>\n            <span *ngIf="item.typeid == 3" class="badge-custom dark-badge">{{ item.type }}</span>\n        </ion-col>\n      </ion-row>\n      <ion-grid no-padding>\n            <form padding-horizontal (submit)="sendHours()" *ngIf="item.can_enter_hours !== false">\n                    <div class="title-components">{{ \'NBHOURS\' | translate }}\n                    </div>\n                    <!-- List Section -->\n                    <ion-list>\n                    <ion-item>\n                            <ion-input placeholder="{{ \'NBHOURS_PLACEHOLDER\' | translate }}"  type="number"  [(ngModel)]="nb_hours" name="nb_hours"></ion-input>\n                    </ion-item>\n                    <ion-item  >\n                            <button ion-button full text-uppercase box-shadow color="primary" >{{ \'SAVE\' | translate }}</button>\n                    </ion-item>\n                </ion-list>\n            </form>\n\n          <form padding-horizontal (submit)="sendSubscription()" >\n          <div class="title-components">{{ \'SUBSCRIPTION\' | translate }}\n              <span *ngIf="item.subscribe_status == 0 && item.subscribe_status !== false" class="badge-custom danger-badge display-flex subscribe-badge"><ion-icon name="close-circle"></ion-icon>{{  \'STATUS_REFUSED\' | translate }}</span>\n              <span *ngIf="item.subscribe_status == 2" class="badge-custom success-badge display-flex subscribe-badge"><ion-icon name="checkmark-circle" color="secondary"></ion-icon>{{  \'STATUS_APPROVED\' | translate }}</span>\n              <span *ngIf="item.subscribe_status == 1" class="badge-custom waiting-badge display-flex subscribe-badge"><ion-icon name="ios-timer-outline"></ion-icon>{{  \'STATUS_WAITING\' | translate }}</span>\n\n          </div>\n          <!-- List Section -->\n          <ion-list no-lines >\n            <ion-item lines *ngFor="let date of periods">\n              <!-- Toggle -->\n              <ion-toggle color="secondary" item-start (ionChange)="togglePeriod(date.id_period)" checked="{{ date.subscribed }}" [disabled]="isDisabled()"></ion-toggle>\n              <!-- Item-subtitle -->\n              <ion-label item-subtitle>{{ date.label }}</ion-label>\n              <!-- Item-title -->\n              <ion-label item-title class="labelperiod">{{ date.start_date | prettydate }} <ion-icon name="arrow-forward"></ion-icon> {{ date.end_date | prettydate }}</ion-label>\n            </ion-item>\n            <ion-item  *ngIf="item.subscribe_status === false">\n              <button ion-button full text-uppercase box-shadow color="secondary"   [disabled]="isDisabled()" >{{ \'SUBSCRIBE\' | translate }}</button>\n            </ion-item>\n            <ion-item  *ngIf="item.subscribe_status !== false">\n              <button ion-button full text-uppercase box-shadow color="secondary"  [disabled]="isDisabled()" >{{ \'MODIFY\' | translate }}</button>\n            </ion-item>\n          </ion-list>\n        </form>\n        \n      </ion-grid>\n    </ion-list>\n</ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\item-detail\item-detail.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__providers_api_api__["a" /* Api */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers__["b" /* Items */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
     ], ItemDetailPage);

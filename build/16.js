@@ -1,15 +1,16 @@
 webpackJsonp([16],{
 
-/***/ 465:
+/***/ 466:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardsPageModule", function() { return CardsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactPageModule", function() { return ContactPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cards__ = __webpack_require__(482);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact__ = __webpack_require__(484);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(122);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,35 +21,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CardsPageModule = /** @class */ (function () {
-    function CardsPageModule() {
+
+var ContactPageModule = /** @class */ (function () {
+    function ContactPageModule() {
     }
-    CardsPageModule = __decorate([
+    ContactPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__cards__["a" /* CardsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__contact__["a" /* ContactPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__cards__["a" /* CardsPage */]),
-                __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__contact__["a" /* ContactPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__["b" /* TranslateModule */].forChild(),
+                __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__["a" /* PipesModule */]
             ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_3__cards__["a" /* CardsPage */]
-            ]
         })
-    ], CardsPageModule);
-    return CardsPageModule;
+    ], ContactPageModule);
+    return ContactPageModule;
 }());
 
-//# sourceMappingURL=cards.module.js.map
+//# sourceMappingURL=contact.module.js.map
 
 /***/ }),
 
-/***/ 482:
+/***/ 484:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(121);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -62,49 +62,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var CardsPage = /** @class */ (function () {
-    function CardsPage(navCtrl) {
+/**
+ * Generated class for the ContactPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ContactPage = /** @class */ (function () {
+    function ContactPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.cardItems = [
-            {
-                user: {
-                    avatar: 'assets/img/marty-avatar.png',
-                    name: 'Marty McFly'
-                },
-                date: 'November 5, 1955',
-                image: 'assets/img/advance-card-bttf.png',
-                content: 'Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.',
-            },
-            {
-                user: {
-                    avatar: 'assets/img/sarah-avatar.png.jpeg',
-                    name: 'Sarah Connor'
-                },
-                date: 'May 12, 1984',
-                image: 'assets/img/advance-card-tmntr.jpg',
-                content: 'I face the unknown future, with a sense of hope. Because if a machine, a Terminator, can learn the value of human life, maybe we can too.'
-            },
-            {
-                user: {
-                    avatar: 'assets/img/ian-avatar.png',
-                    name: 'Dr. Ian Malcolm'
-                },
-                date: 'June 28, 1990',
-                image: 'assets/img/advance-card-jp.jpg',
-                content: 'Your scientists were so preoccupied with whether or not they could, that they didn\'t stop to think if they should.'
-            }
-        ];
+        this.navParams = navParams;
     }
-    CardsPage = __decorate([
+    ContactPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ContactPage');
+    };
+    ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cards',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\cards\cards.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{ \'CARDS_TITLE\' | translate }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-card *ngFor="let item of cardItems">\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img [src]="item.user.avatar">\n      </ion-avatar>\n      <h2>{{item.user.name}}</h2>\n      <p>{{item.date}}</p>\n    </ion-item>\n\n    <img [src]="item.image">\n\n    <ion-card-content>\n      <p>{{item.content}}</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n            <ion-icon name=\'thumbs-up\'></ion-icon>\n            12 Likes\n          </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n            <ion-icon name=\'text\'></ion-icon>\n            4 Comments\n          </button>\n      </ion-col>\n      <ion-col center text-center>\n        <ion-note>\n          11h ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\cards\cards.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\contact\contact.html"*/'<ion-header>\n    <ion-navbar transparent>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title >{{ \'CONTACT\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<!--Content -->\n<ion-content elastic-header>\n    <ion-grid no-padding>\n        <ion-row>\n            <ion-col col-12 map-header>\n                <ion-item border no-lines no-padding>\n                    <!--Maps Title-->\n                    <h1 padding-left maps-title margin-top margin-bottom text-wrap>Centre d’action bénévole et communautaire Saint-Laurent</h1>\n                </ion-item>\n            </ion-col>\n            <!---Content-->\n            <ion-col col-12 map-content transparent>\n                <ion-item-group>\n                    <ion-item-divider no-lines>\n                        <h6  text-wrap margin-bottom><ion-icon name="map"></ion-icon>  910, avenue Sainte-Croix<br>\n                          Saint-Laurent, Québec<br>\n                          H4L 3Y6\n                          <a href=\'https://www.google.ca/maps/place/910+Avenue+Sainte-Croix,+Saint-Laurent,+QC+H4L+3Y6/@45.516031,-73.672814,15z/data=!4m5!3m4!1s0x4cc91841d25d2245:0xc0de0e045a32c4!8m2!3d45.5149408!4d-73.6781764?hl=fr\'>\n                            Voir sur la carte\n                        </a>\n                        </h6>\n\n                        <h6  text-wrap margin-bottom><ion-icon name="call"></ion-icon>  Tél. :\n  \n                          <a href=\'tel:+1-514-744-5511\'>\n                            514-744-5511\n                        </a>\n                        </h6>\n\n                        <h6  text-wrap margin-bottom><ion-icon name="call"></ion-icon>  Fax. :\n  \n                          <a href=\'tel:+1-514-744-1206\'>\n                              514-744-1206\n                        </a>\n                        </h6>\n\n\n                        \n\n\n<ion-item no-lines>\n    <p>Directrice générale<br>\n      <span color="light" maps-title>Henriette Konté</span> poste 223</p> \n</ion-item>\n\n                        <ion-item no-lines>\n                            <p>Responsable des communications<br>\n                              <span color="light" maps-title>Laurence Bouchard</span> poste 224 </p> \n    </ion-item> \n         \n    <ion-item no-lines>\n    <p  text-wrap>\n    Reponsable des bénévoles<br>\n    <span color="light" maps-title>Mélanie Massicotte</span> poste 222\n    </p>\n    </ion-item>\n    <ion-item no-lines>\n    <p  text-wrap> \n    Coordonnatrice des services aux bénévoles et aux bénéficiaires <br>\n    <span color="light" maps-title>Koné Djakaridja</span> poste 226 \n    </p> \n    </ion-item>\n    \n         \n    <ion-item no-lines>\n    <p  text-wrap> \n    Heures d\'ouverture:<br>\n    Lundi, Mardi, Mercredi, et Vendredi: de 8h à 17h30<br>\n    Jeudi: de 8h à 20h<br>\n    </p> \n    </ion-item>  \n                    </ion-item-divider>\n                    \n                </ion-item-group>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\contact\contact.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */]])
-    ], CardsPage);
-    return CardsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
+    ], ContactPage);
+    return ContactPage;
 }());
 
-//# sourceMappingURL=cards.js.map
+//# sourceMappingURL=contact.js.map
 
 /***/ })
 

@@ -1,6 +1,6 @@
 webpackJsonp([7],{
 
-/***/ 474:
+/***/ 475:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReferenceletterPageModule", function() { return ReferenceletterPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__referenceletter__ = __webpack_require__(491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__referenceletter__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -44,7 +44,7 @@ var ReferenceletterPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 491:
+/***/ 493:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -144,7 +144,7 @@ var ReferenceletterPage = /** @class */ (function () {
     };
     ReferenceletterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-referenceletter',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\referenceletter\referenceletter.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{ \'REFERENCELETTER\' | translate }}</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="loadItems()">\n        <ion-icon name="sync"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n  <ion-grid no-padding>\n        <ion-row *ngIf="currentItems != null">\n          <ion-col col-12 col-lg-4 *ngFor="let item of currentItems">\n            <ion-card text-left box-shadow margin-bottom class="cardevent">\n              <!--Card descriptiom-->\n              <ion-card-content>\n                <ion-card-title>\n                  <!--Card Subtitle-->\n                  <h1 card-subtitle >{{ \'LETTER_REFERENCE_REQUEST\' | translate }}</h1>\n\n                </ion-card-title>\n              </ion-card-content>\n \n              <ion-row>\n                  <ion-col col-12>\n                     <ion-icon name="calendar" color="light"></ion-icon> {{ \'CREATED_AT\' | translate }} : {{ item.createdAt | prettydate }}\n                  </ion-col>\n              </ion-row>\n              <ion-row>\n                 <ion-col  col-12 >\n                    <span *ngIf="item.processed == 1" class="badge-custom success-badge display-flex" float-right><ion-icon name="checkmark-circle" color="secondary"></ion-icon>{{ \'PROCESSED\' | translate }}</span>\n                    <span *ngIf="item.processed == 0" class="badge-custom waiting-badge display-flex" float-right><ion-icon name="ios-timer-outline"></ion-icon>{{ \'WAITING_FOR_PROCESS\' | translate }}</span>\n                 </ion-col>\n              </ion-row>\n            </ion-card>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col  col-12 text-center>\n            <button (click)="sendRequest()" ion-button color="primary" small>{{ \'SEND_NEW_REQUEST\' | translate }}</button>\n          </ion-col>\n        </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\referenceletter\referenceletter.html"*/,
+            selector: 'page-referenceletter',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\referenceletter\referenceletter.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{ \'REFERENCELETTER\' | translate }}</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="loadItems()">\n        <ion-icon name="sync"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n  <ion-grid no-padding>\n        <ion-row *ngIf="currentItems != null">\n          <ion-col col-12 col-lg-4 *ngFor="let item of currentItems">\n            <ion-card text-left box-shadow margin-bottom class="cardevent">\n              <!--Card descriptiom-->\n              <ion-card-content>\n                <ion-card-title>\n                  <!--Card Subtitle-->\n                  <h1 card-subtitle >{{ \'LETTER_REFERENCE_REQUEST\' | translate }}</h1>\n                </ion-card-title>\n              </ion-card-content>\n \n              <ion-row>\n                  <ion-col col-12>\n                     <ion-icon name="calendar" color="light"></ion-icon> {{ \'CREATED_AT\' | translate }} : {{ item.created_at | prettydate }} \n                  </ion-col>\n              </ion-row>\n              <ion-row>\n                 <ion-col  col-12 >\n                    <span *ngIf="item.processed == 1" class="badge-custom success-badge display-flex" float-right><ion-icon name="checkmark-circle" color="secondary"></ion-icon>{{ \'PROCESSED\' | translate }}</span>\n                    <span *ngIf="item.processed == 0" class="badge-custom waiting-badge display-flex" float-right><ion-icon name="ios-timer-outline"></ion-icon>{{ \'WAITING_FOR_PROCESS\' | translate }}</span>\n                 </ion-col>\n              </ion-row>\n            </ion-card>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col  col-12 text-center>\n            <button (click)="sendRequest()" ion-button color="primary" small>{{ \'SEND_NEW_REQUEST\' | translate }}</button>\n          </ion-col>\n        </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\referenceletter\referenceletter.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__providers_api_api__["a" /* Api */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers__["b" /* Items */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2__providers__["d" /* User */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
     ], ReferenceletterPage);

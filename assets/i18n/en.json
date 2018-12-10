@@ -56,6 +56,7 @@
   "NEW_NOTIFICATION": "New notification",
   "IGNORE": "Ignore",
   "VIEW": "View",
+  "CLOSE": "Close",
   "FIRSTNAME": "First name",
   "LASTNAME": "Last name",
   "PHONE": "Phone number",
@@ -71,8 +72,13 @@
   "SPECIALEVENTS" : "Special events",
   "SENIOREVENTS" : "Seniors services",
   "NOACCOUNT": "Don't have account?",
+  "NBHOURS": "Enter the number of hours spent on the event",
   "ACCOUNTCREATED": "Your account has been successfully created!",
-
+  "SAVE": "SAVE",
+  "NBHOURS_PLACEHOLDER":"Number of hours",
+  "EDIT_PROFILE": "Edit my profile",
+  "UPDATEPASSWORD": "Update my password",
+  "CONTACT": "Contact us",
 
   "SETTINGS_PROFILE_BUTTON": "Edit Profile",
 
