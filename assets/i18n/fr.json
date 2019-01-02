@@ -42,6 +42,8 @@
   "SENIOREVENTS" : "Services aux aînés",
   "NOACCOUNT": "Vous n’avez pas de compte ?",
   "ACCOUNTCREATED": "Votre compte a été créé avec succès!",
+  "WARNINGPERIOD": "Vous devez sélectionner au moins une période",
+  "WARNINGSERVICE": "Vous devez sélectionner au moins un service",
 
   "SETTINGS_PAGE_PROFILE": "Modifier le profil",
 
@@ -91,5 +93,7 @@
 
   "CARDS_TITLE": "Social",
 
-  "SEARCH_TITLE": "Recherche"
+  "SEARCH_TITLE": "Recherche",
+  "UNVAILABLEEVENT": "Aucun événement disponible",
+  "UNVAILABLETRAINING": "Aucune formation disponible"
 }
