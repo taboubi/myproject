@@ -1,1 +1,100 @@
-webpackJsonp([9],{431:function(l,n,u){"use strict";function a(l){return t._22(0,[(l()(),t._20(-1,null,["\n"])),(l()(),t.Z(1,0,null,null,10,"ion-header",[],null,null,null,null,null)),t.Y(2,16384,null,0,f.a,[h.a,t.j,t.z,[2,v.a]],null,null),(l()(),t._20(-1,null,["\n\n  "])),(l()(),t.Z(4,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,C.b,C.a)),t.Y(5,49152,null,0,j.a,[m.a,[2,v.a],[2,Y.a],h.a,t.j,t.z],null,null),(l()(),t._20(-1,3,["\n    "])),(l()(),t.Z(7,0,null,3,2,"ion-title",[],null,null,null,Z.b,Z.a)),t.Y(8,49152,null,0,P.a,[h.a,t.j,t.z,[2,q.a],[2,j.a]],null,null),(l()(),t._20(-1,0,["logout"])),(l()(),t._20(-1,3,["\n  "])),(l()(),t._20(-1,null,["\n\n"])),(l()(),t._20(-1,null,["\n\n\n"])),(l()(),t.Z(13,0,null,null,2,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,y.b,y.a)),t.Y(14,4374528,null,0,z.a,[h.a,A.a,L.a,t.j,t.z,m.a,x.a,t.u,[2,v.a],[2,Y.a]],null,null),(l()(),t._20(-1,1,["\n\n"])),(l()(),t._20(-1,null,["\n"]))],null,function(l,n){l(n,4,0,t._11(n,5)._hidden,t._11(n,5)._sbPadding);l(n,13,0,t._11(n,14).statusbarPadding,t._11(n,14)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var t=u(0),o=(u(4),u(143),u(35)),s=function(){function l(l,n,u){this.navCtrl=l,this.navParams=n,this.storage=u,this.storage.set("token",null),this.navCtrl.setRoot("LoginPage")}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad LogoutPage")},l}(),e=function(){return function(){}}(),i=u(347),c=u(348),r=u(349),b=u(350),_=u(351),d=u(352),g=u(353),k=u(354),p=u(355),f=u(146),h=u(2),v=u(6),C=u(442),j=u(44),m=u(10),Y=u(22),Z=u(443),P=u(144),q=u(59),y=u(356),z=u(23),A=u(5),L=u(11),x=u(26),w=u(12),V=t.X({encapsulation:2,styles:[],data:{}}),X=t.V("page-logout",s,function(l){return t._22(0,[(l()(),t.Z(0,0,null,null,1,"page-logout",[],null,null,null,a,V)),t.Y(1,49152,null,0,s,[Y.a,w.a,o.b],null,null)],null,null)},{},{},[]),B=u(14),D=u(19),M=u(145),R=u(40);u.d(n,"LogoutPageModuleNgFactory",function(){return F});var F=t.W(e,[],function(l){return t._7([t._8(512,t.i,t.S,[[8,[i.a,c.a,r.a,b.a,_.a,d.a,g.a,k.a,p.a,X]],[3,t.i],t.s]),t._8(4608,B.k,B.j,[t.r,[2,B.s]]),t._8(4608,D.u,D.u,[]),t._8(4608,D.d,D.d,[]),t._8(512,B.b,B.b,[]),t._8(512,D.s,D.s,[]),t._8(512,D.g,D.g,[]),t._8(512,D.p,D.p,[]),t._8(512,M.a,M.a,[]),t._8(512,M.b,M.b,[]),t._8(512,e,e,[]),t._8(256,R.a,s,[])])})},442:function(l,n,u){"use strict";function a(l){return t._22(0,[(l()(),t.Z(0,0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),t.Y(1,278528,null,0,o.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t.Z(2,0,null,null,8,"button",[["class","back-button"],["ion-button","bar-button"]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.backButtonClick(u)&&a}return a},s.b,s.a)),t.Y(3,278528,null,0,o.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t.Y(4,1097728,null,0,e.a,[[8,"bar-button"],i.a,t.j,t.z],null,null),(l()(),t.Z(5,0,null,0,2,"ion-icon",[["class","back-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(6,278528,null,0,o.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t.Y(7,147456,null,0,c.a,[i.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t.Z(8,0,null,0,2,"span",[["class","back-button-text"]],null,null,null,null,null)),t.Y(9,278528,null,0,o.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t._20(10,null,["",""])),t._10(null,0),t._10(null,1),t._10(null,2),(l()(),t.Z(14,0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),t.Y(15,278528,null,0,o.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t._10(null,3)],function(l,n){var u=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+u._mode);l(n,3,0,"back-button","back-button-"+u._mode);l(n,6,0,"back-button-icon","back-button-icon-"+u._mode);l(n,7,0,u._bbIcon);l(n,9,0,"back-button-text","back-button-text-"+u._mode);l(n,15,0,"toolbar-content","toolbar-content-"+u._mode)},function(l,n){var u=n.component;l(n,2,0,u._hideBb);l(n,5,0,t._11(n,7)._hidden);l(n,10,0,u._backText)})}u.d(n,"a",function(){return r}),n.b=a;var t=u(0),o=u(14),s=u(45),e=u(21),i=u(2),c=u(39),r=(u(6),u(22),t.X({encapsulation:2,styles:[],data:{}}))},443:function(l,n,u){"use strict";function a(l){return t._22(2,[(l()(),t.Z(0,0,null,null,2,"div",[["class","toolbar-title"]],null,null,null,null,null)),t.Y(1,278528,null,0,o.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t._10(null,0)],function(l,n){l(n,1,0,"toolbar-title","toolbar-title-"+n.component._mode)},null)}u.d(n,"a",function(){return s}),n.b=a;var t=u(0),o=u(14),s=(u(2),t.X({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([9],{
+
+/***/ 472:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuPageModule", function() { return MenuPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu__ = __webpack_require__(490);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var MenuPageModule = /** @class */ (function () {
+    function MenuPageModule() {
+    }
+    MenuPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__menu__["a" /* MenuPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__menu__["a" /* MenuPage */]),
+                __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_3__menu__["a" /* MenuPage */]
+            ]
+        })
+    ], MenuPageModule);
+    return MenuPageModule;
+}());
+
+//# sourceMappingURL=menu.module.js.map
+
+/***/ }),
+
+/***/ 490:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(121);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MenuPage = /** @class */ (function () {
+    function MenuPage(navCtrl) {
+        this.navCtrl = navCtrl;
+        this.rootPage = 'ContentPage';
+        // used for an example of ngFor and navigation
+        this.pages = [
+            { title: 'Sign in', component: 'LoginPage' },
+            { title: 'Signup', component: 'SignupPage' }
+        ];
+    }
+    MenuPage.prototype.ionViewDidLoad = function () {
+    };
+    MenuPage.prototype.openPage = function (page) {
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        this.nav.setRoot(page.component);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Nav */])
+    ], MenuPage.prototype, "nav", void 0);
+    MenuPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-menu',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\menu\menu.html"*/'<ion-menu [content]="content">\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav #content [root]="rootPage"></ion-nav>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\menu\menu.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */]])
+    ], MenuPage);
+    return MenuPage;
+}());
+
+//# sourceMappingURL=menu.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=9.js.map
