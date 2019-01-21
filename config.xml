@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.centrebenevoleabc.mobile" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="org.centrebenevoleabc.mobile" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Centre ABC</name>
     <description>Le Centre d’action bénévole et communautaire Saint-Laurent inc a comme mission de promouvoir l’action bénévole dans les différents secteurs de l’activité humaine et de susciter une réponse aux besoins de la communauté.</description>
     <author email="issam.taboubi@gmail.com" href="http://centrebenevoleabc.org/">Centre ABC</author>
