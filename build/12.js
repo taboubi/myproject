@@ -1,1 +1,200 @@
-webpackJsonp([12],{425:function(l,n,u){"use strict";function a(l){return t._22(0,[(l()(),t.Z(0,0,null,null,21,"ion-header",[],null,null,null,null,null)),t.Y(1,16384,null,0,h.a,[Y.a,t.j,t.z,[2,k.a]],null,null),(l()(),t._20(-1,null,["\n    "])),(l()(),t.Z(3,0,null,null,17,"ion-navbar",[["class","toolbar"],["transparent",""]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,f.b,f.a)),t.Y(4,49152,null,0,j.a,[v.a,[2,k.a],[2,C.a],Y.a,t.j,t.z],null,null),(l()(),t._20(-1,3,["\n        "])),(l()(),t.Z(6,0,null,0,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==t._11(l,8).toggle()&&a}return a},z.b,z.a)),t.Y(7,1097728,[[1,4]],0,x.a,[[8,""],Y.a,t.j,t.z],null,null),t.Y(8,1064960,null,0,L.a,[w.a,[2,k.a],[2,x.a],[2,j.a]],{menuToggle:[0,"menuToggle"]},null),t.Y(9,16384,null,1,A.a,[Y.a,t.j,t.z,[2,T.a],[2,j.a]],null,null),t._18(603979776,1,{_buttons:1}),(l()(),t._20(-1,0,["\n      "])),(l()(),t.Z(12,0,null,0,1,"ion-icon",[["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(13,147456,null,0,q.a,[Y.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t._20(-1,0,["\n    "])),(l()(),t._20(-1,3,["\n        "])),(l()(),t.Z(16,0,null,3,3,"ion-title",[],null,null,null,y.b,y.a)),t.Y(17,49152,null,0,M.a,[Y.a,t.j,t.z,[2,T.a],[2,j.a]],null,null),(l()(),t._20(18,0,["",""])),t._13(131072,P.a,[S.a,t.g]),(l()(),t._20(-1,3,["\n    "])),(l()(),t._20(-1,null,["\n"])),(l()(),t._20(-1,null,["\n"])),(l()(),t._20(-1,null,["\n"])),(l()(),t.Z(24,0,null,null,152,"ion-content",[["elastic-header",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,H.b,H.a)),t.Y(25,4374528,null,0,V.a,[Y.a,D.a,B.a,t.j,t.z,v.a,R.a,t.u,[2,k.a],[2,C.a]],null,null),(l()(),t._20(-1,1,["\n    "])),(l()(),t.Z(27,0,null,1,148,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),t.Y(28,16384,null,0,X.a,[],null,null),(l()(),t._20(-1,null,["\n        "])),(l()(),t.Z(30,0,null,null,144,"ion-row",[["class","row"]],null,null,null,null,null)),t.Y(31,16384,null,0,F.a,[],null,null),(l()(),t._20(-1,null,["\n            "])),(l()(),t.Z(33,0,null,null,14,"ion-col",[["class","col"],["col-12",""],["map-header",""]],null,null,null,null,null)),t.Y(34,16384,null,0,J.a,[],null,null),(l()(),t._20(-1,null,["\n                "])),(l()(),t.Z(36,0,null,null,10,"ion-item",[["border",""],["class","item item-block"],["no-lines",""],["no-padding",""]],null,null,null,K.b,K.a)),t.Y(37,1097728,null,3,N.a,[O.a,Y.a,t.j,t.z,[2,Q.a]],null,null),t._18(335544320,2,{contentLabel:0}),t._18(603979776,3,{_buttons:1}),t._18(603979776,4,{_icons:1}),t.Y(41,16384,null,0,I.a,[],null,null),(l()(),t._20(-1,2,["\n                    "])),(l()(),t._20(-1,2,["\n                    "])),(l()(),t.Z(44,0,null,2,1,"h1",[["maps-title",""],["margin-bottom",""],["margin-top",""],["padding-left",""],["text-wrap",""]],null,null,null,null,null)),(l()(),t._20(-1,null,["Centre d’action bénévole et communautaire Saint-Laurent"])),(l()(),t._20(-1,2,["\n                "])),(l()(),t._20(-1,null,["\n            "])),(l()(),t._20(-1,null,["\n            "])),(l()(),t._20(-1,null,["\n            "])),(l()(),t.Z(50,0,null,null,123,"ion-col",[["class","col"],["col-12",""],["map-content",""],["transparent",""]],null,null,null,null,null)),t.Y(51,16384,null,0,J.a,[],null,null),(l()(),t._20(-1,null,["\n                "])),(l()(),t.Z(53,0,null,null,119,"ion-item-group",[],null,null,null,null,null)),t.Y(54,16384,null,0,W.a,[],null,null),(l()(),t._20(-1,null,["\n                    "])),(l()(),t.Z(56,0,null,null,115,"ion-item-divider",[["class","item item-divider"],["no-lines",""]],null,null,null,K.b,K.a)),t.Y(57,1097728,null,3,N.a,[O.a,Y.a,t.j,t.z,[2,Q.a]],null,null),t._18(335544320,5,{contentLabel:0}),t._18(603979776,6,{_buttons:1}),t._18(603979776,7,{_icons:1}),t.Y(61,16384,null,0,E.a,[Y.a,t.j,t.z],null,null),(l()(),t._20(-1,2,["\n                        "])),(l()(),t.Z(63,0,null,2,10,"h6",[["margin-bottom",""],["text-wrap",""]],null,null,null,null,null)),(l()(),t.Z(64,0,null,null,1,"ion-icon",[["name","map"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(65,147456,[[7,4]],0,q.a,[Y.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t._20(-1,null,["  910, avenue Sainte-Croix"])),(l()(),t.Z(67,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t._20(-1,null,["\n                          Saint-Laurent, Québec"])),(l()(),t.Z(69,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t._20(-1,null,["\n                          H4L 3Y6\n                          "])),(l()(),t.Z(71,0,null,null,1,"a",[["href","https://www.google.ca/maps/place/910+Avenue+Sainte-Croix,+Saint-Laurent,+QC+H4L+3Y6/@45.516031,-73.672814,15z/data=!4m5!3m4!1s0x4cc91841d25d2245:0xc0de0e045a32c4!8m2!3d45.5149408!4d-73.6781764?hl=fr"]],null,null,null,null,null)),(l()(),t._20(-1,null,["\n                            Voir sur la carte\n                        "])),(l()(),t._20(-1,null,["\n                        "])),(l()(),t._20(-1,2,["\n\n                        "])),(l()(),t.Z(75,0,null,2,6,"h6",[["margin-bottom",""],["text-wrap",""]],null,null,null,null,null)),(l()(),t.Z(76,0,null,null,1,"ion-icon",[["name","call"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(77,147456,[[7,4]],0,q.a,[Y.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t._20(-1,null,["  Tél. :\n  \n                          "])),(l()(),t.Z(79,0,null,null,1,"a",[["href","tel:+1-514-744-5511"]],null,null,null,null,null)),(l()(),t._20(-1,null,["\n                            514-744-5511\n                        "])),(l()(),t._20(-1,null,["\n                        "])),(l()(),t._20(-1,2,["\n\n                        "])),(l()(),t.Z(83,0,null,2,6,"h6",[["margin-bottom",""],["text-wrap",""]],null,null,null,null,null)),(l()(),t.Z(84,0,null,null,1,"ion-icon",[["name","call"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(85,147456,[[7,4]],0,q.a,[Y.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t._20(-1,null,["  Fax. :\n  \n                          "])),(l()(),t.Z(87,0,null,null,1,"a",[["href","tel:+1-514-744-1206"]],null,null,null,null,null)),(l()(),t._20(-1,null,["\n                              514-744-1206\n                        "])),(l()(),t._20(-1,null,["\n                        "])),(l()(),t._20(-1,2,["\n\n\n                        \n\n\n"])),(l()(),t.Z(91,0,null,2,14,"ion-item",[["class","item item-block"],["no-lines",""]],null,null,null,K.b,K.a)),t.Y(92,1097728,null,3,N.a,[O.a,Y.a,t.j,t.z,[2,Q.a]],null,null),t._18(335544320,8,{contentLabel:0}),t._18(603979776,9,{_buttons:1}),t._18(603979776,10,{_icons:1}),t.Y(96,16384,null,0,I.a,[],null,null),(l()(),t._20(-1,2,["\n    "])),(l()(),t.Z(98,0,null,2,6,"p",[],null,null,null,null,null)),(l()(),t._20(-1,null,["Directrice générale"])),(l()(),t.Z(100,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t._20(-1,null,["\n      "])),(l()(),t.Z(102,0,null,null,1,"span",[["color","light"],["maps-title",""]],null,null,null,null,null)),(l()(),t._20(-1,null,["Henriette Konté"])),(l()(),t._20(-1,null,[" poste 223"])),(l()(),t._20(-1,2,[" \n"])),(l()(),t._20(-1,2,["\n\n                        "])),(l()(),t.Z(107,0,null,2,14,"ion-item",[["class","item item-block"],["no-lines",""]],null,null,null,K.b,K.a)),t.Y(108,1097728,null,3,N.a,[O.a,Y.a,t.j,t.z,[2,Q.a]],null,null),t._18(335544320,11,{contentLabel:0}),t._18(603979776,12,{_buttons:1}),t._18(603979776,13,{_icons:1}),t.Y(112,16384,null,0,I.a,[],null,null),(l()(),t._20(-1,2,["\n                            "])),(l()(),t.Z(114,0,null,2,6,"p",[],null,null,null,null,null)),(l()(),t._20(-1,null,["Responsable des communications"])),(l()(),t.Z(116,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t._20(-1,null,["\n                              "])),(l()(),t.Z(118,0,null,null,1,"span",[["color","light"],["maps-title",""]],null,null,null,null,null)),(l()(),t._20(-1,null,["Laurence Bouchard"])),(l()(),t._20(-1,null,[" poste 224 "])),(l()(),t._20(-1,2,[" \n    "])),(l()(),t._20(-1,2,[" \n         \n    "])),(l()(),t.Z(123,0,null,2,14,"ion-item",[["class","item item-block"],["no-lines",""]],null,null,null,K.b,K.a)),t.Y(124,1097728,null,3,N.a,[O.a,Y.a,t.j,t.z,[2,Q.a]],null,null),t._18(335544320,14,{contentLabel:0}),t._18(603979776,15,{_buttons:1}),t._18(603979776,16,{_icons:1}),t.Y(128,16384,null,0,I.a,[],null,null),(l()(),t._20(-1,2,["\n    "])),(l()(),t.Z(130,0,null,2,6,"p",[["text-wrap",""]],null,null,null,null,null)),(l()(),t._20(-1,null,["\n    Reponsable des bénévoles"])),(l()(),t.Z(132,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t._20(-1,null,["\n    "])),(l()(),t.Z(134,0,null,null,1,"span",[["color","light"],["maps-title",""]],null,null,null,null,null)),(l()(),t._20(-1,null,["Mélanie Massicotte"])),(l()(),t._20(-1,null,[" poste 222\n    "])),(l()(),t._20(-1,2,["\n    "])),(l()(),t._20(-1,2,["\n    "])),(l()(),t.Z(139,0,null,2,14,"ion-item",[["class","item item-block"],["no-lines",""]],null,null,null,K.b,K.a)),t.Y(140,1097728,null,3,N.a,[O.a,Y.a,t.j,t.z,[2,Q.a]],null,null),t._18(335544320,17,{contentLabel:0}),t._18(603979776,18,{_buttons:1}),t._18(603979776,19,{_icons:1}),t.Y(144,16384,null,0,I.a,[],null,null),(l()(),t._20(-1,2,["\n    "])),(l()(),t.Z(146,0,null,2,6,"p",[["text-wrap",""]],null,null,null,null,null)),(l()(),t._20(-1,null,[" \n    Coordonnatrice des services aux bénévoles et aux bénéficiaires "])),(l()(),t.Z(148,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t._20(-1,null,["\n    "])),(l()(),t.Z(150,0,null,null,1,"span",[["color","light"],["maps-title",""]],null,null,null,null,null)),(l()(),t._20(-1,null,["Koné Djakaridja"])),(l()(),t._20(-1,null,[" poste 226 \n    "])),(l()(),t._20(-1,2,[" \n    "])),(l()(),t._20(-1,2,["\n    \n         \n    "])),(l()(),t.Z(155,0,null,2,15,"ion-item",[["class","item item-block"],["no-lines",""]],null,null,null,K.b,K.a)),t.Y(156,1097728,null,3,N.a,[O.a,Y.a,t.j,t.z,[2,Q.a]],null,null),t._18(335544320,20,{contentLabel:0}),t._18(603979776,21,{_buttons:1}),t._18(603979776,22,{_icons:1}),t.Y(160,16384,null,0,I.a,[],null,null),(l()(),t._20(-1,2,["\n    "])),(l()(),t.Z(162,0,null,2,7,"p",[["text-wrap",""]],null,null,null,null,null)),(l()(),t._20(-1,null,[" \n    Heures d'ouverture:"])),(l()(),t.Z(164,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t._20(-1,null,["\n    Lundi, Mardi, Mercredi, et Vendredi: de 8h à 17h30"])),(l()(),t.Z(166,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t._20(-1,null,["\n    Jeudi: de 8h à 20h"])),(l()(),t.Z(168,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t._20(-1,null,["\n    "])),(l()(),t._20(-1,2,[" \n    "])),(l()(),t._20(-1,2,["  \n                    "])),(l()(),t._20(-1,null,["\n                    \n                "])),(l()(),t._20(-1,null,["\n            "])),(l()(),t._20(-1,null,["\n        "])),(l()(),t._20(-1,null,["\n    "])),(l()(),t._20(-1,1,["\n"])),(l()(),t._20(-1,null,["\n\n"]))],function(l,n){l(n,8,0,"");l(n,13,0,"menu");l(n,65,0,"map");l(n,77,0,"call");l(n,85,0,"call")},function(l,n){l(n,3,0,t._11(n,4)._hidden,t._11(n,4)._sbPadding);l(n,6,0,t._11(n,8).isHidden);l(n,12,0,t._11(n,13)._hidden);l(n,18,0,t._21(n,18,0,t._11(n,19).transform("CONTACT")));l(n,24,0,t._11(n,25).statusbarPadding,t._11(n,25)._hasRefresher);l(n,64,0,t._11(n,65)._hidden);l(n,76,0,t._11(n,77)._hidden);l(n,84,0,t._11(n,85)._hidden)})}Object.defineProperty(n,"__esModule",{value:!0});var t=u(0),e=(u(4),u(143),function(){function l(l,n){this.navCtrl=l,this.navParams=n}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad ContactPage")},l}()),o=u(147),i=u(89),_=function(){return function(){}}(),s=u(347),c=u(348),r=u(349),b=u(350),d=u(351),m=u(352),p=u(353),g=u(354),Z=u(355),h=u(146),Y=u(2),k=u(6),f=u(442),j=u(44),v=u(10),C=u(22),z=u(45),x=u(21),L=u(154),w=u(24),A=u(153),T=u(59),q=u(39),y=u(443),M=u(144),P=u(92),S=u(28),H=u(356),V=u(23),D=u(5),B=u(11),R=u(26),X=u(151),F=u(149),J=u(148),K=u(152),N=u(17),O=u(15),Q=u(41),I=u(65),W=u(172),E=u(171),G=u(12),U=t.X({encapsulation:2,styles:[],data:{}}),$=t.V("page-contact",e,function(l){return t._22(0,[(l()(),t.Z(0,0,null,null,1,"page-contact",[],null,null,null,a,U)),t.Y(1,49152,null,0,e,[C.a,G.a],null,null)],null,null)},{},{},[]),ll=u(14),nl=u(19),ul=u(60),al=u(61),tl=u(63),el=u(62),ol=u(90),il=u(145),_l=u(40);u.d(n,"ContactPageModuleNgFactory",function(){return sl});var sl=t.W(_,[],function(l){return t._7([t._8(512,t.i,t.S,[[8,[s.a,c.a,r.a,b.a,d.a,m.a,p.a,g.a,Z.a,$]],[3,t.i],t.s]),t._8(4608,ll.k,ll.j,[t.r,[2,ll.s]]),t._8(4608,nl.u,nl.u,[]),t._8(4608,nl.d,nl.d,[]),t._8(4608,ul.b,ul.a,[]),t._8(4608,al.a,al.b,[]),t._8(4608,tl.b,tl.a,[]),t._8(4608,el.b,el.a,[]),t._8(4608,S.a,S.a,[ol.a,ul.b,al.a,tl.b,el.b,S.b,S.c]),t._8(512,ll.b,ll.b,[]),t._8(512,nl.s,nl.s,[]),t._8(512,nl.g,nl.g,[]),t._8(512,nl.p,nl.p,[]),t._8(512,il.a,il.a,[]),t._8(512,il.b,il.b,[]),t._8(512,i.a,i.a,[]),t._8(512,o.a,o.a,[]),t._8(512,_,_,[]),t._8(256,_l.a,e,[]),t._8(256,S.c,void 0,[]),t._8(256,S.b,void 0,[])])})},442:function(l,n,u){"use strict";function a(l){return t._22(0,[(l()(),t.Z(0,0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),t.Y(1,278528,null,0,e.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t.Z(2,0,null,null,8,"button",[["class","back-button"],["ion-button","bar-button"]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.backButtonClick(u)&&a}return a},o.b,o.a)),t.Y(3,278528,null,0,e.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t.Y(4,1097728,null,0,i.a,[[8,"bar-button"],_.a,t.j,t.z],null,null),(l()(),t.Z(5,0,null,0,2,"ion-icon",[["class","back-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(6,278528,null,0,e.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t.Y(7,147456,null,0,s.a,[_.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t.Z(8,0,null,0,2,"span",[["class","back-button-text"]],null,null,null,null,null)),t.Y(9,278528,null,0,e.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t._20(10,null,["",""])),t._10(null,0),t._10(null,1),t._10(null,2),(l()(),t.Z(14,0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),t.Y(15,278528,null,0,e.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t._10(null,3)],function(l,n){var u=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+u._mode);l(n,3,0,"back-button","back-button-"+u._mode);l(n,6,0,"back-button-icon","back-button-icon-"+u._mode);l(n,7,0,u._bbIcon);l(n,9,0,"back-button-text","back-button-text-"+u._mode);l(n,15,0,"toolbar-content","toolbar-content-"+u._mode)},function(l,n){var u=n.component;l(n,2,0,u._hideBb);l(n,5,0,t._11(n,7)._hidden);l(n,10,0,u._backText)})}u.d(n,"a",function(){return c}),n.b=a;var t=u(0),e=u(14),o=u(45),i=u(21),_=u(2),s=u(39),c=(u(6),u(22),t.X({encapsulation:2,styles:[],data:{}}))},443:function(l,n,u){"use strict";function a(l){return t._22(2,[(l()(),t.Z(0,0,null,null,2,"div",[["class","toolbar-title"]],null,null,null,null,null)),t.Y(1,278528,null,0,e.g,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t._10(null,0)],function(l,n){l(n,1,0,"toolbar-title","toolbar-title-"+n.component._mode)},null)}u.d(n,"a",function(){return o}),n.b=a;var t=u(0),e=u(14),o=(u(2),t.X({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([12],{
+
+/***/ 469:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListMasterPageModule", function() { return ListMasterPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_master__ = __webpack_require__(487);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__ = __webpack_require__(353);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var ListMasterPageModule = /** @class */ (function () {
+    function ListMasterPageModule() {
+    }
+    ListMasterPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__list_master__["a" /* ListMasterPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__list_master__["a" /* ListMasterPage */]),
+                __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild(),
+                __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__["a" /* PipesModule */]
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_3__list_master__["a" /* ListMasterPage */]
+            ]
+        })
+    ], ListMasterPageModule);
+    return ListMasterPageModule;
+}());
+
+//# sourceMappingURL=list-master.module.js.map
+
+/***/ }),
+
+/***/ 487:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListMasterPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers__ = __webpack_require__(58);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ListMasterPage = /** @class */ (function () {
+    function ListMasterPage(navCtrl, alertCtrl, items, api, menu, modalCtrl, user, loadingCtrl) {
+        this.navCtrl = navCtrl;
+        this.alertCtrl = alertCtrl;
+        this.items = items;
+        this.api = api;
+        this.menu = menu;
+        this.modalCtrl = modalCtrl;
+        this.user = user;
+        this.loadingCtrl = loadingCtrl;
+        this.emptyevents = false;
+        this.itemsshown = [];
+    }
+    ListMasterPage.prototype.ionViewCanEnter = function () {
+        var _this = this;
+        var seq = this.api.post('checktoken', []).share();
+        seq.subscribe(function (res) {
+            // If the API returned a successful response, mark the user as logged in
+            if (res.error !== true) {
+                return true;
+            }
+            else {
+                _this.navCtrl.setRoot('LoginPage');
+            }
+        }, function (err) {
+            _this.navCtrl.setRoot('LoginPage');
+        });
+    };
+    ListMasterPage.prototype.ionViewDidEnter = function () {
+        // the root left menu should be disabled on the tutorial page
+        this.menu.enable(true);
+    };
+    ListMasterPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            spinner: 'hide',
+            content: "<img src=\"assets/svg/bars.svg\" width=\"100%\"/>"
+        });
+        loading.present();
+        return new Promise(function (resolve, reject) {
+            var seq = _this.items.query().share();
+            seq.subscribe(function (res) {
+                _this.currentItems = res;
+                if (res.length == 0) {
+                    _this.emptyevents = true;
+                }
+                else {
+                    _this.emptyevents = false;
+                }
+                resolve(true);
+            }, function (err) {
+                loading.dismiss();
+                resolve(false);
+            }, function () { loading.dismiss(); });
+        });
+    };
+    /**
+     * Prompt the user to add a new item. This shows our ItemCreatePage in a
+     * modal and then adds the new item to our data source if the user created one.
+     */
+    ListMasterPage.prototype.addItem = function () {
+        var _this = this;
+        var addModal = this.modalCtrl.create('ItemCreatePage');
+        addModal.onDidDismiss(function (item) {
+            if (item) {
+                _this.items.add(item);
+            }
+        });
+        addModal.present();
+    };
+    /**
+     * Delete an item from the list of items.
+     */
+    ListMasterPage.prototype.deleteItem = function (item) {
+        this.items.delete(item);
+    };
+    /**
+     * Navigate to the detail page for this item.
+     */
+    ListMasterPage.prototype.openItem = function (item) {
+        this.navCtrl.push('ItemDetailPage', {
+            item: item
+        });
+    };
+    ListMasterPage.prototype.loadItems = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            spinner: 'hide',
+            content: "<img src=\"assets/svg/bars.svg\" width=\"100%\"/>"
+        });
+        loading.present();
+        var seq = this.items.query().share();
+        seq.subscribe(function (res) {
+            _this.currentItems = res;
+        }, function (err) {
+            console.log('error get list items');
+        }, function () { loading.dismiss(); });
+    };
+    ListMasterPage.prototype.isItemShown = function (id) {
+        if (this.itemsshown.indexOf(id) !== -1) {
+            return true;
+        }
+        return false;
+    };
+    ListMasterPage.prototype.toggleItem = function (id) {
+        console.log('toggle');
+        var position = this.itemsshown.indexOf(id);
+        if (position !== -1) {
+            this.itemsshown.splice(position, 1);
+        }
+        else {
+            this.itemsshown.push(id);
+        }
+    };
+    ListMasterPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-list-master',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\list-master\list-master.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{ \'EVENTS\' | translate }}</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="loadItems()">\n        <ion-icon name="sync"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n  <ion-grid no-padding>\n        <ion-row align-items-center *ngIf="emptyevents == true">\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n                <h5 ion-text text-center color="light">{{ \'UNVAILABLEEVENT\' | translate }}</h5>\n            </ion-col>\n        </ion-row>\n        <ion-row *ngIf="currentItems != null">\n          <ion-col col-12 col-lg-6 col-xl-4 *ngFor="let item of currentItems">\n            <ion-card text-left box-shadow class="cardevent">\n                <span *ngIf="item.subscribers == item.limit_subscribe" class="stamp is-nope">{{ \'FULL\' | translate }}</span>\n              <!--Card descriptiom-->\n              <ion-card-content>\n\n                <ion-card-title>\n                  <!--Card Subtitle-->\n                  <h1 card-subtitle >{{item.title}}</h1>\n                  <!--Card Body Text-->\n                  <p card-body-text>{{item.description}}</p>\n                </ion-card-title>\n              </ion-card-content>\n              <ion-row>\n                <ion-col class="col">\n                    <span item-start span-medium><ion-icon name="people" color=\'light\' item-start></ion-icon>{{ \'SUBSCRIPTIONS\' | translate }}</span>\n                    <span item-end span-medium small>({{item.subscribers}}/{{item.limit_subscribe}})</span>\n                </ion-col>\n                \n              </ion-row>\n              <ion-row>\n                  <ion-col class="col">\n                      <span span-medium ><ion-icon name="pin" color=\'light\'></ion-icon>{{item.adress}}</span>\n                  </ion-col>\n                </ion-row>\n              <ion-row *ngIf="item.dates.length > 0" >\n                  <ion-col col-12>\n                     <ion-icon name="calendar" color="light"></ion-icon> {{ \'DATE_TIME\' | translate }} \n                     <ion-icon name="ios-remove-circle-outline" color="light"  *ngIf="isItemShown(item.id) == true" (click)="toggleItem(item.id)"></ion-icon>\n                     <ion-icon name="ios-add-circle-outline" color="light" *ngIf="isItemShown(item.id) == false" (click)="toggleItem(item.id)"></ion-icon>\n                  </ion-col>\n                  <div *ngIf="isItemShown(item.id) == true">\n                    <ion-row align-items-center   *ngFor="let date of item.dates" >\n                        \n                          \n                            <ion-col col-6 col-lg-4>\n                                <span class="date-event"> \n                                  <ion-icon name="time"></ion-icon>{{ date.start_date | prettydate }}\n                                </span>\n                            </ion-col>\n                            <ion-col col-1 col-lg-4>\n                                <ion-icon name="arrow-forward"></ion-icon>\n                            </ion-col>\n                            <ion-col col-5 col-lg-4>\n                                <span class="date-event"> \n                                {{ date.end_date | prettydate }}\n                              </span>\n                            </ion-col>\n                          \n                      \n                    </ion-row>\n                  </div>\n              </ion-row>\n              <ion-row>\n                <ion-col class="display-flex" col-6>\n                    <ion-icon name="pricetags" color="light"></ion-icon>\n                    <span *ngIf="item.typeid == 1" class="badge-custom success-badge">{{ item.type }}</span>\n                    <span *ngIf="item.typeid == 2" class="badge-custom blue-light-badge">{{ item.type }}</span>\n                    <span *ngIf="item.typeid == 3" class="badge-custom dark-badge">{{ item.type }}</span>\n                </ion-col>\n               <ion-col *ngIf="item.can_subscribe === true && item.subscribe_status === false" col-6><button (click)="openItem(item)" ion-button color="primary"   item-end icon-start small float-right>{{ \'SUBSCRIBE\' | translate }}</button></ion-col>\n               <ion-col *ngIf="item.subscribe_status !== false" col-6 class="display-flex">\n                  <span *ngIf="item.subscribe_status == 0" class="badge-custom danger-badge display-flex"><ion-icon name="close-circle"></ion-icon>{{  \'STATUS_REFUSED\' | translate }}</span>\n                  <span *ngIf="item.subscribe_status == 2" class="badge-custom success-badge display-flex"><ion-icon name="checkmark-circle" color="secondary"></ion-icon>{{  \'STATUS_APPROVED\' | translate }}</span>\n                  <span *ngIf="item.subscribe_status == 1" class="badge-custom waiting-badge display-flex"><ion-icon name="ios-timer-outline"></ion-icon>{{  \'STATUS_WAITING\' | translate }}</span>\n                  <a  *ngIf="item.can_modify === true" (click)="openItem(item)" small float-right class="link-edit-event"><ion-icon name="md-create"  color="light"></ion-icon></a>\n                  <a  *ngIf="item.can_modify === false" (click)="openItem(item)" small float-right class="link-edit-event" ><ion-icon name="ios-arrow-dropright"  color="light"></ion-icon></a>\n               </ion-col>\n               \n              </ion-row>\n            </ion-card>\n          </ion-col>\n        </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\list-master\list-master.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers__["b" /* Items */], __WEBPACK_IMPORTED_MODULE_2__providers__["a" /* Api */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2__providers__["d" /* User */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
+    ], ListMasterPage);
+    return ListMasterPage;
+}());
+
+//# sourceMappingURL=list-master.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=12.js.map
