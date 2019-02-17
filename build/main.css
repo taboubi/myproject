@@ -33051,6 +33051,21 @@ page-item-create .profile-image-wrapper .profile-image-placeholder ion-icon {
   margin-top: 10px;
 }
 
+page-item-detail ion-app.md [padding-horizontal],
+page-item-detail ion-app.md [padding-horizontal] {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+page-item-detail .item-ios, page-item-detail .item-md {
+  padding-left: 0px !important;
+}
+
+page-item-detail .item.item-md .checkbox-md,
+page-item-detail .item.item-ios .checkbox-ios {
+  margin-right: 12px !important;
+}
+
 page-item-detail .toolbar-ios ion-title {
   padding-left: 110px;
   padding-right: 5px;

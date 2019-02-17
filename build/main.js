@@ -34,47 +34,47 @@ var map = {
 		15
 	],
 	"../pages/item-create/item-create.module": [
-		468,
+		478,
 		14
 	],
 	"../pages/item-detail/item-detail.module": [
-		469,
+		468,
 		13
 	],
 	"../pages/list-master/list-master.module": [
-		470,
+		469,
 		1
 	],
 	"../pages/login/login.module": [
-		471,
+		470,
 		12
 	],
 	"../pages/logout/logout.module": [
-		472,
+		471,
 		11
 	],
 	"../pages/menu/menu.module": [
-		473,
+		472,
 		10
 	],
 	"../pages/myevents/myevents.module": [
-		474,
+		473,
 		0
 	],
 	"../pages/referenceletter/referenceletter.module": [
-		475,
+		474,
 		9
 	],
 	"../pages/search/search.module": [
-		476,
+		475,
 		8
 	],
 	"../pages/settings/settings.module": [
-		477,
+		476,
 		7
 	],
 	"../pages/signup/signup.module": [
-		478,
+		477,
 		6
 	],
 	"../pages/tabs/tabs.module": [
@@ -82,11 +82,11 @@ var map = {
 		5
 	],
 	"../pages/trainings/trainings.module": [
-		481,
+		480,
 		4
 	],
 	"../pages/tutorial/tutorial.module": [
-		480,
+		481,
 		3
 	],
 	"../pages/welcome/welcome.module": [
@@ -374,7 +374,6 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/content/content.module#ContentPageModule', name: 'ContentPage', segment: 'content', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
@@ -385,9 +384,10 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/trainings/trainings.module#TrainingsPageModule', name: 'TrainingsPage', segment: 'trainings', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                     ]
                 }),
