@@ -38,60 +38,60 @@ var map = {
 		14
 	],
 	"../pages/item-detail/item-detail.module": [
-		470,
+		469,
 		13
 	],
 	"../pages/list-master/list-master.module": [
-		469,
-		12
+		470,
+		1
 	],
 	"../pages/login/login.module": [
 		471,
-		11
+		12
 	],
 	"../pages/logout/logout.module": [
 		472,
-		10
+		11
 	],
 	"../pages/menu/menu.module": [
 		473,
-		9
+		10
 	],
 	"../pages/myevents/myevents.module": [
 		474,
-		8
+		0
 	],
 	"../pages/referenceletter/referenceletter.module": [
 		475,
-		7
+		9
 	],
 	"../pages/search/search.module": [
 		476,
-		6
+		8
 	],
 	"../pages/settings/settings.module": [
+		477,
+		7
+	],
+	"../pages/signup/signup.module": [
+		478,
+		6
+	],
+	"../pages/tabs/tabs.module": [
 		479,
 		5
 	],
-	"../pages/signup/signup.module": [
-		477,
+	"../pages/trainings/trainings.module": [
+		481,
 		4
 	],
-	"../pages/tabs/tabs.module": [
-		478,
+	"../pages/tutorial/tutorial.module": [
+		480,
 		3
 	],
-	"../pages/trainings/trainings.module": [
-		480,
-		2
-	],
-	"../pages/tutorial/tutorial.module": [
-		482,
-		1
-	],
 	"../pages/welcome/welcome.module": [
-		481,
-		0
+		482,
+		2
 	]
 };
 function webpackAsyncContext(req) {
@@ -375,20 +375,20 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/content/content.module#ContentPageModule', name: 'ContentPage', segment: 'content', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/logout/logout.module#LogoutPageModule', name: 'LogoutPage', segment: 'logout', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/myevents/myevents.module#MyeventsPageModule', name: 'MyeventsPage', segment: 'myevents', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/referenceletter/referenceletter.module#ReferenceletterPageModule', name: 'ReferenceletterPage', segment: 'referenceletter', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/trainings/trainings.module#TrainingsPageModule', name: 'TrainingsPage', segment: 'trainings', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot({
@@ -1208,7 +1208,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["j" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Issam\superproject\src\app\app.html"*/'<ion-menu [content]="content">\n\n    <ion-content>\n\n      <div class="menu-bg" header-background-image padding [ngStyle]="{\'background-image\': \'url(../assets/images/background/39.jpg)\'}">\n\n        <img src="assets/images/logo/1.png" class="avatar">\n\n        <p class="logo-description"><span>Faire bouger la communauté!</span><br><span>Simple comme bonjour!</span></p>\n\n      </div>\n\n      <ion-list no-margin>\n\n        <button menuClose ion-item item-title main-menu no-lines border *ngFor="let p of pages" (click)="openPage(p)">\n\n          <ion-icon icon-small item-left>\n\n            <ion-icon name="{{p.icon}}" color="light"></ion-icon>\n\n          </ion-icon>\n\n          {{ p.id_title | translate }}\n\n        </button>\n\n      </ion-list>\n\n    </ion-content>\n\n  \n\n    </ion-menu>\n\n    <ion-nav #content [root]="rootPage">\n\n      ldkfgdlfkgd\n\n    </ion-nav>'/*ion-inline-end:"C:\Users\Issam\superproject\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Issam\superproject\src\app\app.html"*/'<ion-menu [content]="content">\n\n    <ion-content>\n\n      <div class="menu-bg" header-background-image padding [ngStyle]="{\'background-image\': \'url(../assets/images/background/39.jpg)\'}">\n\n        <img src="assets/images/logo/1.png" class="avatar">\n\n        <p class="logo-description"><span>Faire bouger la communauté!</span><br><span>Simple comme l\'ABC!</span></p>\n\n      </div>\n\n      <ion-list no-margin>\n\n        <button menuClose ion-item item-title main-menu no-lines border *ngFor="let p of pages" (click)="openPage(p)">\n\n          <ion-icon icon-small item-left>\n\n            <ion-icon name="{{p.icon}}" color="light"></ion-icon>\n\n          </ion-icon>\n\n          {{ p.id_title | translate }}\n\n        </button>\n\n      </ion-list>\n\n    </ion-content>\n\n  \n\n    </ion-menu>\n\n    <ion-nav #content [root]="rootPage">\n\n      ldkfgdlfkgd\n\n    </ion-nav>'/*ion-inline-end:"C:\Users\Issam\superproject\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["m" /* Platform */], __WEBPACK_IMPORTED_MODULE_6__providers__["c" /* Settings */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["b" /* Config */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */],

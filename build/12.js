@@ -1,16 +1,15 @@
 webpackJsonp([12],{
 
-/***/ 469:
+/***/ 471:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListMasterPageModule", function() { return ListMasterPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_master__ = __webpack_require__(487);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login__ = __webpack_require__(493);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -21,40 +20,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var ListMasterPageModule = /** @class */ (function () {
-    function ListMasterPageModule() {
+var LoginPageModule = /** @class */ (function () {
+    function LoginPageModule() {
     }
-    ListMasterPageModule = __decorate([
+    LoginPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__list_master__["a" /* ListMasterPage */],
+                __WEBPACK_IMPORTED_MODULE_3__login__["a" /* LoginPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__list_master__["a" /* ListMasterPage */]),
-                __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild(),
-                __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__["a" /* PipesModule */]
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__login__["a" /* LoginPage */]),
+                __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_3__list_master__["a" /* ListMasterPage */]
+                __WEBPACK_IMPORTED_MODULE_3__login__["a" /* LoginPage */]
             ]
         })
-    ], ListMasterPageModule);
-    return ListMasterPageModule;
+    ], LoginPageModule);
+    return LoginPageModule;
 }());
 
-//# sourceMappingURL=list-master.module.js.map
+//# sourceMappingURL=login.module.js.map
 
 /***/ }),
 
-/***/ 487:
+/***/ 493:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListMasterPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5____ = __webpack_require__(354);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -69,130 +69,142 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ListMasterPage = /** @class */ (function () {
-    function ListMasterPage(navCtrl, alertCtrl, items, api, menu, modalCtrl, user, loadingCtrl) {
-        this.navCtrl = navCtrl;
-        this.alertCtrl = alertCtrl;
-        this.items = items;
-        this.api = api;
-        this.menu = menu;
-        this.modalCtrl = modalCtrl;
-        this.user = user;
-        this.loadingCtrl = loadingCtrl;
-        this.emptyevents = false;
-        this.itemsshown = [];
-    }
-    ListMasterPage.prototype.ionViewCanEnter = function () {
+
+
+var LoginPage = /** @class */ (function () {
+    function LoginPage(navCtrl, user, toastCtrl, translateService, menu, loadingCtrl, navParams, storage, settings, alertCtrl) {
         var _this = this;
-        var seq = this.api.post('checktoken', []).share();
-        seq.subscribe(function (res) {
-            // If the API returned a successful response, mark the user as logged in
-            if (res.error !== true) {
-                return true;
+        this.navCtrl = navCtrl;
+        this.user = user;
+        this.toastCtrl = toastCtrl;
+        this.translateService = translateService;
+        this.menu = menu;
+        this.loadingCtrl = loadingCtrl;
+        this.storage = storage;
+        this.settings = settings;
+        this.alertCtrl = alertCtrl;
+        this.isUsernameValid = true;
+        this.isPasswordValid = true;
+        this.account = {
+            username: null,
+            password: null
+        };
+        this.lang = null;
+        this.translateService.get(['LOGIN_ERROR', 'NOTACTIVE', 'ACCOUNTCREATED']).subscribe(function (value) {
+            _this.loginErrorString = value.LOGIN_ERROR;
+            _this.loginNotActive = value.NOTACTIVE;
+            _this.messagesuccess = value.ACCOUNTCREATED;
+        });
+        this.storage.get('_settings')
+            .then(function (settings) {
+            if (settings == null) {
+                _this.lang = 'fr';
             }
             else {
-                _this.navCtrl.setRoot('LoginPage');
+                _this.lang = settings.language;
             }
-        }, function (err) {
-            _this.navCtrl.setRoot('LoginPage');
         });
-    };
-    ListMasterPage.prototype.ionViewDidEnter = function () {
-        // the root left menu should be disabled on the tutorial page
-        this.menu.enable(true);
-    };
-    ListMasterPage.prototype.ionViewWillEnter = function () {
+        this.settings.load().then(function () {
+        });
+        if (navParams.get('signup') == true) {
+            var confirmAlert = this.alertCtrl.create({
+                title: '',
+                message: this.messagesuccess,
+                buttons: [{
+                        text: 'OK',
+                        role: 'cancel'
+                    }]
+            });
+            confirmAlert.present();
+        }
+    }
+    // Attempt to login in through our User service
+    LoginPage.prototype.doLogin = function () {
         var _this = this;
+        if (!this.validate()) {
+            return;
+        }
         var loading = this.loadingCtrl.create({
             spinner: 'hide',
             content: "<img src=\"assets/svg/bars.svg\" width=\"100%\"/>"
         });
         loading.present();
-        return new Promise(function (resolve, reject) {
-            var seq = _this.items.query().share();
-            seq.subscribe(function (res) {
-                _this.currentItems = res;
-                if (res.length == 0) {
-                    _this.emptyevents = true;
-                }
-                else {
-                    _this.emptyevents = false;
-                }
-                resolve(true);
-            }, function (err) {
-                loading.dismiss();
-                resolve(false);
-            }, function () { loading.dismiss(); });
-        });
-    };
-    /**
-     * Prompt the user to add a new item. This shows our ItemCreatePage in a
-     * modal and then adds the new item to our data source if the user created one.
-     */
-    ListMasterPage.prototype.addItem = function () {
-        var _this = this;
-        var addModal = this.modalCtrl.create('ItemCreatePage');
-        addModal.onDidDismiss(function (item) {
-            if (item) {
-                _this.items.add(item);
+        this.user.login(this.account).subscribe(function (resp) {
+            if (resp.enabled === true) {
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5____["b" /* MainPage */]);
             }
-        });
-        addModal.present();
-    };
-    /**
-     * Delete an item from the list of items.
-     */
-    ListMasterPage.prototype.deleteItem = function (item) {
-        this.items.delete(item);
-    };
-    /**
-     * Navigate to the detail page for this item.
-     */
-    ListMasterPage.prototype.openItem = function (item) {
-        this.navCtrl.push('ItemDetailPage', {
-            item: item
-        });
-    };
-    ListMasterPage.prototype.loadItems = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            spinner: 'hide',
-            content: "<img src=\"assets/svg/bars.svg\" width=\"100%\"/>"
-        });
-        loading.present();
-        var seq = this.items.query().share();
-        seq.subscribe(function (res) {
-            _this.currentItems = res;
+            else {
+                var toast = _this.toastCtrl.create({
+                    message: _this.loginNotActive,
+                    duration: 8000,
+                    position: 'bottom',
+                    showCloseButton: true,
+                    closeButtonText: "X"
+                });
+                toast.present();
+            }
         }, function (err) {
-            console.log('error get list items');
+            //this.navCtrl.push(MainPage);
+            // Unable to log in
+            loading.dismiss();
+            var toast = _this.toastCtrl.create({
+                message: _this.loginErrorString,
+                duration: 6000,
+                position: 'top'
+            });
+            toast.present();
         }, function () { loading.dismiss(); });
     };
-    ListMasterPage.prototype.isItemShown = function (id) {
-        if (this.itemsshown.indexOf(id) !== -1) {
-            return true;
-        }
-        return false;
+    LoginPage.prototype.ionViewDidEnter = function () {
+        // the root left menu should be disabled on the tutorial page
+        this.menu.enable(false);
     };
-    ListMasterPage.prototype.toggleItem = function (id) {
-        console.log('toggle');
-        var position = this.itemsshown.indexOf(id);
-        if (position !== -1) {
-            this.itemsshown.splice(position, 1);
+    LoginPage.prototype.validate = function () {
+        this.isUsernameValid = true;
+        this.isPasswordValid = true;
+        if (!this.account.username || this.account.username.length == 0) {
+            this.isUsernameValid = false;
         }
-        else {
-            this.itemsshown.push(id);
+        if (!this.account.password || this.account.password.length == 0) {
+            this.isPasswordValid = false;
         }
+        return this.isPasswordValid && this.isUsernameValid;
     };
-    ListMasterPage = __decorate([
+    LoginPage.prototype.register = function () {
+        this.navCtrl.push('SignupPage');
+    };
+    LoginPage.prototype.changeLanguage = function (lang) {
+        this.settings.setValue('language', lang);
+        this.translateService.use(lang);
+        this.lang = lang;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LoginPage.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LoginPage.prototype, "events", void 0);
+    LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list-master',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\list-master\list-master.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{ \'EVENTS\' | translate }}</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="loadItems()">\n        <ion-icon name="sync"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n  <ion-grid no-padding>\n        <ion-row align-items-center *ngIf="emptyevents == true">\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n                <h5 ion-text text-center color="light">{{ \'UNVAILABLEEVENT\' | translate }}</h5>\n            </ion-col>\n        </ion-row>\n        <ion-row *ngIf="currentItems != null">\n          <ion-col col-12 col-lg-6 col-xl-4 *ngFor="let item of currentItems">\n            <ion-card text-left box-shadow class="cardevent">\n                <span *ngIf="item.subscribers == item.limit_subscribe" class="stamp is-nope">{{ \'FULL\' | translate }}</span>\n              <!--Card descriptiom-->\n              <ion-card-content>\n\n                <ion-card-title>\n                  <!--Card Subtitle-->\n                  <h1 card-subtitle >{{item.title}}</h1>\n                  <!--Card Body Text-->\n                  <p card-body-text>{{item.description}}</p>\n                </ion-card-title>\n              </ion-card-content>\n              <ion-row>\n                <ion-col class="col">\n                    <span item-start span-medium><ion-icon name="people" color=\'light\' item-start></ion-icon>{{ \'SUBSCRIPTIONS\' | translate }}</span>\n                    <span item-end span-medium small>({{item.subscribers}}/{{item.limit_subscribe}})</span>\n                </ion-col>\n                \n              </ion-row>\n              <ion-row>\n                  <ion-col class="col">\n                      <span span-medium ><ion-icon name="pin" color=\'light\'></ion-icon>{{item.adress}}</span>\n                  </ion-col>\n                </ion-row>\n              <ion-row *ngIf="item.dates.length > 0" >\n                  <ion-col col-12>\n                     <ion-icon name="calendar" color="light"></ion-icon> {{ \'DATE_TIME\' | translate }} \n                     <ion-icon name="ios-remove-circle-outline" color="light"  *ngIf="isItemShown(item.id) == true" (click)="toggleItem(item.id)"></ion-icon>\n                     <ion-icon name="ios-add-circle-outline" color="light" *ngIf="isItemShown(item.id) == false" (click)="toggleItem(item.id)"></ion-icon>\n                  </ion-col>\n                  <div *ngIf="isItemShown(item.id) == true">\n                    <ion-row align-items-center   *ngFor="let date of item.dates" >\n                        \n                          \n                            <ion-col col-6 col-lg-4>\n                                <span class="date-event"> \n                                  <ion-icon name="time"></ion-icon>{{ date.start_date | prettydate }}\n                                </span>\n                            </ion-col>\n                            <ion-col col-1 col-lg-4>\n                                <ion-icon name="arrow-forward"></ion-icon>\n                            </ion-col>\n                            <ion-col col-5 col-lg-4>\n                                <span class="date-event"> \n                                {{ date.end_date | prettydate }}\n                              </span>\n                            </ion-col>\n                          \n                      \n                    </ion-row>\n                  </div>\n              </ion-row>\n              <ion-row>\n                <ion-col class="display-flex" col-6>\n                    <ion-icon name="pricetags" color="light"></ion-icon>\n                    <span *ngIf="item.typeid == 1" class="badge-custom success-badge">{{ item.type }}</span>\n                    <span *ngIf="item.typeid == 2" class="badge-custom blue-light-badge">{{ item.type }}</span>\n                    <span *ngIf="item.typeid == 3" class="badge-custom dark-badge">{{ item.type }}</span>\n                </ion-col>\n               <ion-col *ngIf="item.can_subscribe === true && item.subscribe_status === false" col-6><button (click)="openItem(item)" ion-button color="primary"   item-end icon-start small float-right>{{ \'SUBSCRIBE\' | translate }}</button></ion-col>\n               <ion-col *ngIf="item.subscribe_status !== false" col-6 class="display-flex">\n                  <span *ngIf="item.subscribe_status == 0" class="badge-custom danger-badge display-flex"><ion-icon name="close-circle"></ion-icon>{{  \'STATUS_REFUSED\' | translate }}</span>\n                  <span *ngIf="item.subscribe_status == 2" class="badge-custom success-badge display-flex"><ion-icon name="checkmark-circle" color="secondary"></ion-icon>{{  \'STATUS_APPROVED\' | translate }}</span>\n                  <span *ngIf="item.subscribe_status == 1" class="badge-custom waiting-badge display-flex"><ion-icon name="ios-timer-outline"></ion-icon>{{  \'STATUS_WAITING\' | translate }}</span>\n                  <a  *ngIf="item.can_modify === true" (click)="openItem(item)" small float-right class="link-edit-event"><ion-icon name="md-create"  color="light"></ion-icon></a>\n                  <a  *ngIf="item.can_modify === false" (click)="openItem(item)" small float-right class="link-edit-event" ><ion-icon name="ios-arrow-dropright"  color="light"></ion-icon></a>\n               </ion-col>\n               \n              </ion-row>\n            </ion-card>\n          </ion-col>\n        </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\list-master\list-master.html"*/
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\login\login.html"*/'<ion-header>\n\n\n\n    <ion-navbar>\n\n      <ion-title>\n\n          <div class="title-elements">\n\n              {{ \'LOGIN_TITLE\' | translate }}\n\n          <button ion-button text-capitalize button-clear clear float-right no-padding *ngIf="lang == \'fr\'" (click)="changeLanguage(\'en\')">English</button>\n\n          <button ion-button text-capitalize button-clear clear float-right no-padding *ngIf="lang == \'en\'" (click)="changeLanguage(\'fr\')">Français</button>\n\n          </div>\n\n      </ion-title>\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n<ion-content  background-size [ngStyle]="{\'background-image\': \'url(../assets/images/background/39.jpg)\'}">\n\n    \n\n    <ion-grid >\n\n      <ion-row align-items-center>\n\n        <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n          \n\n          <ion-item transparent no-lines no-padding margin-top>\n\n            <!---Logo-->\n\n            <img box-shadow item-start margin src="assets/images/logo/1.png">\n\n            <!---Logo Subtitle-->\n\n            <h2 login-subtitle>Faire bouger la communauté!</h2>\n\n            <!---Logo Title-->\n\n            <h1 ion-text login-title no-margin text-wrap>Simple comme l\'ABC!</h1>\n\n          </ion-item>\n\n          <!---Form-->\n\n          <form padding-horizontal (submit)="doLogin()" >\n\n            <!---Input field username-->\n\n            <ion-item margin-top transparent>\n\n              <ion-label stacked>{{ \'Email\' | translate }}</ion-label>\n\n              <ion-input required type="text" placeholder="{{ \'Email\' | translate }}" [(ngModel)]="account.username" name="username" [ngModelOptions]="{standalone: true}"></ion-input>\n\n              <ion-label error-field no-margin  *ngIf="!isUsernameValid">{{\'REQUIRED_FIELD\' | translate}}</ion-label>\n\n            </ion-item>\n\n            <!---Input field password-->\n\n            <ion-item transparent>\n\n              <ion-label stacked>{{ \'PASSWORD\' | translate }}</ion-label>\n\n              <ion-input required type="password" placeholder="{{ \'PASSWORD\' | translate }}" [(ngModel)]="account.password" name="password" [ngModelOptions]="{standalone: true}"></ion-input>\n\n              <ion-label error-field no-margin *ngIf="!isPasswordValid">{{\'REQUIRED_FIELD\' | translate}}</ion-label>\n\n            </ion-item>\n\n            <!---Login button-->\n\n            <button ion-button default-button full text-uppercase box-shadow >{{ \'LOGIN_BUTTON\' | translate }}</button>\n\n          </form>\n\n            <!-- Button Register Now-->\n\n\n\n            <div description text-center padding-horizontal>\n\n              <p>{{ \'NOACCOUNT\' | translate }}</p>\n\n              <button ion-button full color="light" outline text-uppercase (click)="register()">{{ \'SIGNUP\' | translate }}</button>\n\n            </div>\n\n\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\login\login.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers__["b" /* Items */], __WEBPACK_IMPORTED_MODULE_2__providers__["a" /* Api */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2__providers__["d" /* User */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
-    ], ListMasterPage);
-    return ListMasterPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* Nav */],
+            __WEBPACK_IMPORTED_MODULE_4__providers__["d" /* User */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* MenuController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_4__providers__["c" /* Settings */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */]])
+    ], LoginPage);
+    return LoginPage;
 }());
 
-//# sourceMappingURL=list-master.js.map
+//# sourceMappingURL=login.js.map
 
 /***/ })
 

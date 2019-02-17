@@ -1,15 +1,16 @@
 webpackJsonp([9],{
 
-/***/ 473:
+/***/ 475:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuPageModule", function() { return MenuPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReferenceletterPageModule", function() { return ReferenceletterPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu__ = __webpack_require__(491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__referenceletter__ = __webpack_require__(497);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,37 +21,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MenuPageModule = /** @class */ (function () {
-    function MenuPageModule() {
+
+var ReferenceletterPageModule = /** @class */ (function () {
+    function ReferenceletterPageModule() {
     }
-    MenuPageModule = __decorate([
+    ReferenceletterPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__menu__["a" /* MenuPage */],
+                __WEBPACK_IMPORTED_MODULE_2__referenceletter__["a" /* ReferenceletterPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__menu__["a" /* MenuPage */]),
-                __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__referenceletter__["a" /* ReferenceletterPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild(),
+                __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__["a" /* PipesModule */]
             ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_3__menu__["a" /* MenuPage */]
-            ]
         })
-    ], MenuPageModule);
-    return MenuPageModule;
+    ], ReferenceletterPageModule);
+    return ReferenceletterPageModule;
 }());
 
-//# sourceMappingURL=menu.module.js.map
+//# sourceMappingURL=referenceletter.module.js.map
 
 /***/ }),
 
-/***/ 491:
+/***/ 497:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReferenceletterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(59);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -62,37 +64,94 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var MenuPage = /** @class */ (function () {
-    function MenuPage(navCtrl) {
+
+
+
+/**
+ * Generated class for the MyeventsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ReferenceletterPage = /** @class */ (function () {
+    function ReferenceletterPage(api, navCtrl, items, menu, modalCtrl, user, loadingCtrl) {
+        this.api = api;
         this.navCtrl = navCtrl;
-        this.rootPage = 'ContentPage';
-        // used for an example of ngFor and navigation
-        this.pages = [
-            { title: 'Sign in', component: 'LoginPage' },
-            { title: 'Signup', component: 'SignupPage' }
-        ];
+        this.items = items;
+        this.menu = menu;
+        this.modalCtrl = modalCtrl;
+        this.user = user;
+        this.loadingCtrl = loadingCtrl;
     }
-    MenuPage.prototype.ionViewDidLoad = function () {
+    ReferenceletterPage.prototype.ionViewCanEnter = function () {
+        var _this = this;
+        var seq = this.api.post('checktoken', []).share();
+        seq.subscribe(function (res) {
+            // If the API returned a successful response, mark the user as logged in
+            if (res.error !== true) {
+                return true;
+            }
+            else {
+                _this.navCtrl.setRoot('LoginPage');
+            }
+        }, function (err) {
+            _this.navCtrl.setRoot('LoginPage');
+        });
     };
-    MenuPage.prototype.openPage = function (page) {
-        // Reset the content nav to have just this page
-        // we wouldn't want the back button to show in this scenario
-        this.nav.setRoot(page.component);
+    ReferenceletterPage.prototype.ionViewDidEnter = function () {
+        // the root left menu should be disabled on the tutorial page
+        this.menu.enable(true);
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Nav */])
-    ], MenuPage.prototype, "nav", void 0);
-    MenuPage = __decorate([
+    ReferenceletterPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            spinner: 'hide',
+            content: "<img src=\"assets/svg/bars.svg\" width=\"100%\"/>"
+        });
+        loading.present();
+        return new Promise(function (resolve, reject) {
+            var seq = _this.items.queryletter().share();
+            seq.subscribe(function (res) {
+                _this.currentItems = res;
+                resolve(true);
+            }, function (err) {
+                resolve(false);
+            }, function () { loading.dismiss(); });
+        });
+    };
+    ReferenceletterPage.prototype.loadItems = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            spinner: 'hide',
+            content: "<img src=\"assets/svg/bars.svg\" width=\"100%\"/>"
+        });
+        loading.present();
+        var seq = this.items.queryletter().share();
+        seq.subscribe(function (res) {
+            _this.currentItems = res;
+        }, function (err) {
+            console.log('error get list items');
+        }, function () { loading.dismiss(); });
+    };
+    ReferenceletterPage.prototype.sendRequest = function () {
+        var _this = this;
+        var seq = this.api.post('api/rflrequest', {}).share();
+        seq.subscribe(function (res) {
+            _this.loadItems();
+        }, function (err) {
+            console.error('ERROR', err);
+        });
+    };
+    ReferenceletterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-menu',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\menu\menu.html"*/'<ion-menu [content]="content">\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav #content [root]="rootPage"></ion-nav>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\menu\menu.html"*/
+            selector: 'page-referenceletter',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\referenceletter\referenceletter.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{ \'REFERENCELETTER\' | translate }}</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="loadItems()">\n        <ion-icon name="sync"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n  <ion-grid no-padding>\n        <ion-row *ngIf="currentItems != null">\n          <ion-col col-12 col-lg-4 *ngFor="let item of currentItems">\n            <ion-card text-left box-shadow margin-bottom class="cardevent">\n              <!--Card descriptiom-->\n              <ion-card-content>\n                <ion-card-title>\n                  <!--Card Subtitle-->\n                  <h1 card-subtitle >{{ \'LETTER_REFERENCE_REQUEST\' | translate }}</h1>\n                </ion-card-title>\n              </ion-card-content>\n \n              <ion-row>\n                  <ion-col col-12>\n                     <ion-icon name="calendar" color="light"></ion-icon> {{ \'CREATED_AT\' | translate }} : {{ item.created_at | prettydate }} \n                  </ion-col>\n              </ion-row>\n              <ion-row>\n                 <ion-col  col-12 >\n                    <span *ngIf="item.processed == 1" class="badge-custom success-badge display-flex" float-right><ion-icon name="checkmark-circle" color="secondary"></ion-icon>{{ \'PROCESSED\' | translate }}</span>\n                    <span *ngIf="item.processed == 0" class="badge-custom waiting-badge display-flex" float-right><ion-icon name="ios-timer-outline"></ion-icon>{{ \'WAITING_FOR_PROCESS\' | translate }}</span>\n                 </ion-col>\n              </ion-row>\n            </ion-card>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col  col-12 text-center>\n            <button (click)="sendRequest()" ion-button color="primary" small>{{ \'SEND_NEW_REQUEST\' | translate }}</button>\n          </ion-col>\n        </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\referenceletter\referenceletter.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */]])
-    ], MenuPage);
-    return MenuPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__providers_api_api__["a" /* Api */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers__["b" /* Items */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2__providers__["d" /* User */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
+    ], ReferenceletterPage);
+    return ReferenceletterPage;
 }());
 
-//# sourceMappingURL=menu.js.map
+//# sourceMappingURL=referenceletter.js.map
 
 /***/ })
 
