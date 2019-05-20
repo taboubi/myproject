@@ -1,6 +1,6 @@
 webpackJsonp([12],{
 
-/***/ 470:
+/***/ 471:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login__ = __webpack_require__(492);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login__ = __webpack_require__(494);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,7 +44,7 @@ var LoginPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 492:
+/***/ 494:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -173,6 +173,9 @@ var LoginPage = /** @class */ (function () {
     LoginPage.prototype.register = function () {
         this.navCtrl.push('SignupPage');
     };
+    LoginPage.prototype.forgotpassword = function () {
+        this.navCtrl.push('GeneralPage');
+    };
     LoginPage.prototype.changeLanguage = function (lang) {
         this.settings.setValue('language', lang);
         this.translateService.use(lang);
@@ -188,7 +191,7 @@ var LoginPage = /** @class */ (function () {
     ], LoginPage.prototype, "events", void 0);
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Issam\superproject\src\pages\login\login.html"*/'<ion-header>\n\n\n\n    <ion-navbar>\n\n      <ion-title>\n\n          <div class="title-elements">\n\n              {{ \'LOGIN_TITLE\' | translate }}\n\n          <button ion-button text-capitalize button-clear clear float-right no-padding *ngIf="lang == \'fr\'" (click)="changeLanguage(\'en\')">English</button>\n\n          <button ion-button text-capitalize button-clear clear float-right no-padding *ngIf="lang == \'en\'" (click)="changeLanguage(\'fr\')">Français</button>\n\n          </div>\n\n      </ion-title>\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n<ion-content  background-size [ngStyle]="{\'background-image\': \'url(../assets/images/background/39.jpg)\'}">\n\n    \n\n    <ion-grid >\n\n      <ion-row align-items-center>\n\n        <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n          \n\n          <ion-item transparent no-lines no-padding margin-top>\n\n            <!---Logo-->\n\n            <img box-shadow item-start margin src="assets/images/logo/1.png">\n\n            <!---Logo Subtitle-->\n\n            <h2 login-subtitle>Faire bouger la communauté!</h2>\n\n            <!---Logo Title-->\n\n            <h1 ion-text login-title no-margin text-wrap>Simple comme l\'ABC!</h1>\n\n          </ion-item>\n\n          <!---Form-->\n\n          <form padding-horizontal (submit)="doLogin()" >\n\n            <!---Input field username-->\n\n            <ion-item margin-top transparent>\n\n              <ion-label stacked>{{ \'Email\' | translate }}</ion-label>\n\n              <ion-input required type="text" placeholder="{{ \'Email\' | translate }}" [(ngModel)]="account.username" name="username" [ngModelOptions]="{standalone: true}"></ion-input>\n\n              <ion-label error-field no-margin  *ngIf="!isUsernameValid">{{\'REQUIRED_FIELD\' | translate}}</ion-label>\n\n            </ion-item>\n\n            <!---Input field password-->\n\n            <ion-item transparent>\n\n              <ion-label stacked>{{ \'PASSWORD\' | translate }}</ion-label>\n\n              <ion-input required type="password" placeholder="{{ \'PASSWORD\' | translate }}" [(ngModel)]="account.password" name="password" [ngModelOptions]="{standalone: true}"></ion-input>\n\n              <ion-label error-field no-margin *ngIf="!isPasswordValid">{{\'REQUIRED_FIELD\' | translate}}</ion-label>\n\n            </ion-item>\n\n            <!---Login button-->\n\n            <button ion-button default-button full text-uppercase box-shadow >{{ \'LOGIN_BUTTON\' | translate }}</button>\n\n          </form>\n\n            <!-- Button Register Now-->\n\n\n\n            <div description text-center padding-horizontal>\n\n              <p>{{ \'NOACCOUNT\' | translate }}</p>\n\n              <button ion-button full color="light" outline text-uppercase (click)="register()">{{ \'SIGNUP\' | translate }}</button>\n\n            </div>\n\n\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Issam\superproject\src\pages\login\login.html"*/
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Issam\superprojectv2\src\pages\login\login.html"*/'<ion-header>\n\n\n\n    <ion-navbar>\n\n      <ion-title>\n\n          <div class="title-elements">\n\n              {{ \'LOGIN_TITLE\' | translate }}\n\n          <button ion-button text-capitalize button-clear clear float-right no-padding *ngIf="lang == \'fr\'" (click)="changeLanguage(\'en\')">English</button>\n\n          <button ion-button text-capitalize button-clear clear float-right no-padding *ngIf="lang == \'en\'" (click)="changeLanguage(\'fr\')">Français</button>\n\n          </div>\n\n      </ion-title>\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n<ion-content  background-size [ngStyle]="{\'background-image\': \'url(../assets/images/background/39.jpg)\'}">\n\n    \n\n    <ion-grid >\n\n      <ion-row align-items-center>\n\n        <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n            <div description text-right padding-horizontal>\n\n                <p> <a class="forgot"  (click)="forgotpassword()">{{\'FORGOTTEN_PASSWORD\' | translate}}</a></p>\n\n              </div>\n\n          <ion-item transparent no-lines no-padding margin-top>\n\n            <!---Logo-->\n\n            <img box-shadow item-start margin src="assets/images/logo/1.png">\n\n            <!---Logo Subtitle-->\n\n            <h2 login-subtitle>Faire bouger la communauté!</h2>\n\n            <!---Logo Title-->\n\n            <h1 ion-text login-title no-margin text-wrap>Simple comme l\'ABC!</h1>\n\n          </ion-item>\n\n          <!---Form-->\n\n          <form padding-horizontal (submit)="doLogin()" >\n\n            <!---Input field username-->\n\n            <ion-item margin-top transparent>\n\n              <ion-label stacked>{{ \'Email\' | translate }}</ion-label>\n\n              <ion-input required type="text" placeholder="{{ \'Email\' | translate }}" [(ngModel)]="account.username" name="username" [ngModelOptions]="{standalone: true}"></ion-input>\n\n              <ion-label error-field no-margin  *ngIf="!isUsernameValid">{{\'REQUIRED_FIELD\' | translate}}</ion-label>\n\n            </ion-item>\n\n            <!---Input field password-->\n\n            <ion-item transparent>\n\n              <ion-label stacked>{{ \'PASSWORD\' | translate }}</ion-label>\n\n              <ion-input required type="password" placeholder="{{ \'PASSWORD\' | translate }}" [(ngModel)]="account.password" name="password" [ngModelOptions]="{standalone: true}"></ion-input>\n\n              <ion-label error-field no-margin *ngIf="!isPasswordValid">{{\'REQUIRED_FIELD\' | translate}}</ion-label>\n\n            </ion-item>\n\n            <!---Login button-->\n\n            <button ion-button default-button full text-uppercase box-shadow >{{ \'LOGIN_BUTTON\' | translate }}</button>\n\n          </form>\n\n            <!-- Button Register Now-->\n\n\n\n            <div description text-center padding-horizontal>\n\n              <p>{{ \'NOACCOUNT\' | translate }}</p>\n\n              <button ion-button full color="light" outline text-uppercase (click)="register()">{{ \'SIGNUP\' | translate }}</button>\n\n            </div>\n\n\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Issam\superprojectv2\src\pages\login\login.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* Nav */],
             __WEBPACK_IMPORTED_MODULE_4__providers__["d" /* User */],

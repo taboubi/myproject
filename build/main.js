@@ -1,4 +1,4 @@
-webpackJsonp([18],{
+webpackJsonp([19],{
 
 /***/ 134:
 /***/ (function(module, exports) {
@@ -22,19 +22,23 @@ webpackEmptyAsyncContext.id = 134;
 
 var map = {
 	"../pages/cards/cards.module": [
+		472,
+		18
+	],
+	"../pages/contact/contact.module": [
 		465,
 		17
 	],
-	"../pages/contact/contact.module": [
-		466,
-		16
-	],
 	"../pages/content/content.module": [
 		467,
+		16
+	],
+	"../pages/general/general.module": [
+		477,
 		15
 	],
 	"../pages/item-create/item-create.module": [
-		478,
+		466,
 		14
 	],
 	"../pages/item-detail/item-detail.module": [
@@ -46,19 +50,19 @@ var map = {
 		1
 	],
 	"../pages/login/login.module": [
-		470,
+		471,
 		12
 	],
 	"../pages/logout/logout.module": [
-		471,
+		470,
 		11
 	],
 	"../pages/menu/menu.module": [
-		472,
+		473,
 		10
 	],
 	"../pages/myevents/myevents.module": [
-		473,
+		475,
 		0
 	],
 	"../pages/referenceletter/referenceletter.module": [
@@ -66,15 +70,15 @@ var map = {
 		9
 	],
 	"../pages/search/search.module": [
-		475,
+		476,
 		8
 	],
 	"../pages/settings/settings.module": [
-		476,
+		478,
 		7
 	],
 	"../pages/signup/signup.module": [
-		477,
+		483,
 		6
 	],
 	"../pages/tabs/tabs.module": [
@@ -82,15 +86,15 @@ var map = {
 		5
 	],
 	"../pages/trainings/trainings.module": [
-		480,
+		481,
 		4
 	],
 	"../pages/tutorial/tutorial.module": [
-		481,
+		482,
 		3
 	],
 	"../pages/welcome/welcome.module": [
-		482,
+		480,
 		2
 	]
 };
@@ -199,6 +203,14 @@ var Items = /** @class */ (function () {
     };
     Items.prototype.queryletter = function (params) {
         var req = this.api.get('api/myrf', params);
+        return req;
+    };
+    Items.prototype.queryinterests = function (params) {
+        var req = this.api.get('api/interests', params);
+        return req;
+    };
+    Items.prototype.querycategories = function (params) {
+        var req = this.api.get('api/categories', params);
         return req;
     };
     Items.prototype.add = function (item) {
@@ -371,24 +383,25 @@ var AppModule = /** @class */ (function () {
                 }),
                 __WEBPACK_IMPORTED_MODULE_9_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/content/content.module#ContentPageModule', name: 'ContentPage', segment: 'content', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/logout/logout.module#LogoutPageModule', name: 'LogoutPage', segment: 'logout', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/myevents/myevents.module#MyeventsPageModule', name: 'MyeventsPage', segment: 'myevents', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/referenceletter/referenceletter.module#ReferenceletterPageModule', name: 'ReferenceletterPage', segment: 'referenceletter', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/myevents/myevents.module#MyeventsPageModule', name: 'MyeventsPage', segment: 'myevents', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/general/general.module#GeneralPageModule', name: 'GeneralPage', segment: 'general', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/trainings/trainings.module#TrainingsPageModule', name: 'TrainingsPage', segment: 'trainings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot({
@@ -1208,7 +1221,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["j" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Issam\superproject\src\app\app.html"*/'<ion-menu [content]="content">\n\n    <ion-content>\n\n      <div class="menu-bg" header-background-image padding [ngStyle]="{\'background-image\': \'url(../assets/images/background/39.jpg)\'}">\n\n        <img src="assets/images/logo/1.png" class="avatar">\n\n        <p class="logo-description"><span>Faire bouger la communauté!</span><br><span>Simple comme l\'ABC!</span></p>\n\n      </div>\n\n      <ion-list no-margin>\n\n        <button menuClose ion-item item-title main-menu no-lines border *ngFor="let p of pages" (click)="openPage(p)">\n\n          <ion-icon icon-small item-left>\n\n            <ion-icon name="{{p.icon}}" color="light"></ion-icon>\n\n          </ion-icon>\n\n          {{ p.id_title | translate }}\n\n        </button>\n\n      </ion-list>\n\n    </ion-content>\n\n  \n\n    </ion-menu>\n\n    <ion-nav #content [root]="rootPage">\n\n      ldkfgdlfkgd\n\n    </ion-nav>'/*ion-inline-end:"C:\Users\Issam\superproject\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Issam\superprojectv2\src\app\app.html"*/'<ion-menu [content]="content">\n\n    <ion-content>\n\n      <div class="menu-bg" header-background-image padding [ngStyle]="{\'background-image\': \'url(../assets/images/background/39.jpg)\'}">\n\n        <img src="assets/images/logo/1.png" class="avatar">\n\n        <p class="logo-description"><span>Faire bouger la communauté!</span><br><span>Simple comme l\'ABC!</span></p>\n\n      </div>\n\n      <ion-list no-margin>\n\n        <button menuClose ion-item item-title main-menu no-lines border *ngFor="let p of pages" (click)="openPage(p)">\n\n          <ion-icon icon-small item-left>\n\n            <ion-icon name="{{p.icon}}" color="light"></ion-icon>\n\n          </ion-icon>\n\n          {{ p.id_title | translate }}\n\n        </button>\n\n      </ion-list>\n\n    </ion-content>\n\n  \n\n    </ion-menu>\n\n    <ion-nav #content [root]="rootPage">\n\n      ldkfgdlfkgd\n\n    </ion-nav>'/*ion-inline-end:"C:\Users\Issam\superprojectv2\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["m" /* Platform */], __WEBPACK_IMPORTED_MODULE_6__providers__["c" /* Settings */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["b" /* Config */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */],
@@ -1290,7 +1303,7 @@ var Api = /** @class */ (function () {
     function Api(http, storage) {
         this.http = http;
         this.storage = storage;
-        this.url = 'https://admin.centrebenevoleabc.org';
+        this.url = 'https://adminpp.centrebenevoleabc.org';
         //url: string = 'http://localhost/cabc/public/index.php';
         this.oauth = {
             grant_type: 'password',

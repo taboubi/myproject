@@ -44,8 +44,11 @@
   "ACCOUNTCREATED": "Votre compte a été créé avec succès!",
   "WARNINGPERIOD": "Vous devez sélectionner au moins une période",
   "WARNINGSERVICE": "Vous devez sélectionner au moins un service",
-
+  "MAILSENT": "Dans quelques instants, vous recevrez un email contenant le code pour réinitialiser votre mot de passe. Veuillez enter le code et le nouveau mot de passe.",
+  "NEWPASSWORD": "Nouveau mot de passe",
   "SETTINGS_PAGE_PROFILE": "Modifier le profil",
+  "PASSWORDTEXT": "Mot de passe mis à jour avec succès",
+  "INVALIDCODE": "code invalide",
 
   "WELCOME_TITLE": "Bienvenue",
   "FORGOTTEN_PASSWORD": "Mot de passe oublié?",
@@ -85,6 +88,10 @@
   "EDIT_PROFILE": "Modifier mon profil",
   "UPDATEPASSWORD": "Changer mon mot de passe",
   "CONTACT": "Nous joindre",
+  "CHOOSECATEGORY": "Choisir une catégorie",
+  "ALLCATEGORIES": "Toutes les catégories",
+  "RESETPASSWORD": "Réinitialiser le mot de passe",
+  "EMAILNOTFOUND": "Désolé, cet email n'existe pas.",
 
   "LIST_MASTER_TITLE": "Items",
 

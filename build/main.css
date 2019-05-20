@@ -32964,6 +32964,39 @@ ion-card [card-title] {
   font-size: 2em;
 }
 
+.item-period {
+  border-bottom: 1px solid whitesmoke !important;
+  margin-bottom: 5px !important;
+}
+
+.item-period .label-subtitle {
+  font-size: 13px !important;
+}
+
+.item-period .labelperiod {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.item-period .labelperiod span.sub-period {
+  font-size: 11px !important;
+  color: #a40046;
+  margin-right: 2px !important;
+  margin-left: 2px !important;
+}
+
+.item-period .labelperiod span.sub-period .icon {
+  margin-top: 5px !important;
+  margin-right: 5px;
+}
+
+.period-full {
+  color: #0A9928 !important;
+  border: 1px solid #0A9928;
+  padding: 3px;
+  border-radius: 4px;
+}
+
 page-contact .item-divider {
   padding-left: 5px;
 }
@@ -33019,6 +33052,13 @@ page-contact .icon-star::before {
 
 page-contact [border]::before {
   left: 0 !important;
+}
+
+page-general .button-small-md {
+  height: 2.1em;
+  font-size: 1.3rem !important;
+  padding: 0 0.9em !important;
+  margin-top: 10px;
 }
 
 page-item-create .profile-image-wrapper {
@@ -33229,6 +33269,87 @@ page-item-detail .labelperiod {
   font-size: 1.1rem !important;
 }
 
+page-list-master ion-select {
+  width: 326px;
+  max-width: 326px;
+}
+
+page-list-master ion-content .scroll-content {
+  margin-top: 50px !important;
+}
+
+page-list-master li {
+  list-style-type: none;
+}
+
+page-list-master .collapsible-header [background-size] {
+  width: 326px;
+  height: 170px;
+  position: relative;
+  border-radius: 5px;
+}
+
+page-list-master .collapsible-header [background-size] [title-block] {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+page-list-master .collapsible-header [background-size] [title-block] [item-subtitle] {
+  margin-bottom: 5px;
+  color: white !important;
+}
+
+page-list-master .collapsible-header [background-size] [title-block] [header-title] {
+  margin-top: 7px;
+  color: white;
+}
+
+page-list-master .collapsible-header [background-size] ion-label {
+  margin: 0 !important;
+}
+
+page-list-master .collapsible-header [button-icon] {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+}
+
+page-list-master .collapsible-header [button-icon] ion-icon::before {
+  font-weight: bold;
+  margin: 0;
+}
+
+page-list-master .collapsible-header [span-medium] {
+  line-height: 37px;
+  margin-bottom: 10px;
+}
+
+page-list-master .item-accordion {
+  height: 0;
+  display: block !important;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  overflow: hidden;
+}
+
+page-list-master .item-accordion [span-medium] {
+  margin-top: 5px;
+  display: block;
+}
+
+page-list-master .item-accordion [icon-medium]::before {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+page-list-master .item-accordion.active {
+  height: 185px !important;
+}
+
 /*  #Style Login + logo 1
 ================================================*/
 .loading-ios .loading-wrapper,
@@ -33237,6 +33358,11 @@ page-item-detail .labelperiod {
   max-height: 80px;
   border-radius: 17px;
   padding: 15px;
+}
+
+page-login .forgot {
+  color: #a40046;
+  text-decoration: none;
 }
 
 page-login .title-elements {

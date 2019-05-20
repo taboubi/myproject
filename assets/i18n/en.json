@@ -81,13 +81,20 @@
   "EDIT_PROFILE": "Edit my profile",
   "UPDATEPASSWORD": "Update my password",
   "CONTACT": "Contact us",
+  "CHOOSECATEGORY": "Choose a category",
+  "ALLCATEGORIES": "All categories",
+  "RESETPASSWORD": "Reset password",
+  "NEWPASSWORD": "New password",
+  "EMAILNOTFOUND": "Sorry, this email does not exist.",
+  "MAILSENT": "In a moment, you will receive an email containing the code to reset your password. Please enter the code and the new password.",
 
   "SETTINGS_PROFILE_BUTTON": "Edit Profile",
 
   "SETTINGS_PAGE_PROFILE": "Edit Profile",
 
   "WELCOME_TITLE": "Welcome",
-  "FORGOTTEN_PASSWORD": "Forgot your password?",
+  "FORGOTTEN_PASSWORD": "Forgot password?",
+  "PASSWORDTEXT": "Password successfully updated",
   "REQUIRED_FIELD": "Mandatory",
   "SUBSCRIBE": "Subscribe",
 
@@ -111,6 +118,7 @@
   "DELETE_BUTTON": "Delete",
 
   "CARDS_TITLE": "Social",
+  "INVALIDCODE": "Invalid code",
 
   "SEARCH_TITLE": "Search",
   "SEARCH_PLACEHOLDER": "Search the items list, e.g. \"Donald Duck\"",
