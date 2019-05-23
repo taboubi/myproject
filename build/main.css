@@ -33274,6 +33274,11 @@ page-list-master ion-select {
   max-width: 326px;
 }
 
+page-list-master ion-list.ios-category-event {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 page-list-master ion-content .scroll-content {
   margin-top: 50px !important;
 }
