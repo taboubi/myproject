@@ -1,1 +1,93 @@
-webpackJsonp([17],{439:function(l,n,t){"use strict";function a(l){return r._22(0,[(l()(),r.Z(0,0,null,null,1,"ion-icon",[["class","tab-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),r.Y(1,147456,null,0,j.a,[B.a,r.j,r.z],{name:[0,"name"],isActive:[1,"isActive"]},null)],function(l,n){var t=n.component;l(n,1,0,t.tab.tabIcon,t.tab.isSelected)},function(l,n){l(n,0,0,r._11(n,1)._hidden)})}function u(l){return r._22(0,[(l()(),r.Z(0,0,null,null,1,"span",[["class","tab-button-text"]],null,null,null,null,null)),(l()(),r._20(1,null,["",""]))],null,function(l,n){l(n,1,0,n.component.tab.tabTitle)})}function o(l){return r._22(0,[(l()(),r.Z(0,0,null,null,2,"ion-badge",[["class","tab-badge"]],null,null,null,null,null)),r.Y(1,16384,null,0,S.a,[B.a,r.j,r.z],{color:[0,"color"]},null),(l()(),r._20(2,null,["",""]))],function(l,n){l(n,1,0,n.component.tab.tabBadgeStyle)},function(l,n){l(n,2,0,n.component.tab.tabBadge)})}function e(l){return r._22(0,[(l()(),r.U(16777216,null,null,1,null,a)),r.Y(1,16384,null,0,k.i,[r.I,r.F],{ngIf:[0,"ngIf"]},null),(l()(),r.U(16777216,null,null,1,null,u)),r.Y(3,16384,null,0,k.i,[r.I,r.F],{ngIf:[0,"ngIf"]},null),(l()(),r.U(16777216,null,null,1,null,o)),r.Y(5,16384,null,0,k.i,[r.I,r.F],{ngIf:[0,"ngIf"]},null),(l()(),r.Z(6,0,null,null,0,"div",[["class","button-effect"]],null,null,null,null,null))],function(l,n){var t=n.component;l(n,1,0,t.tab.tabIcon);l(n,3,0,t.tab.tabTitle);l(n,5,0,t.tab.tabBadge)},null)}function i(l){return r._22(0,[(l()(),r.Z(0,0,null,null,1,"a",[["class","tab-button"],["href","#"],["role","tab"]],[[1,"id",0],[1,"aria-controls",0],[1,"aria-selected",0],[2,"has-title",null],[2,"has-icon",null],[2,"has-title-only",null],[2,"icon-only",null],[2,"has-badge",null],[2,"disable-hover",null],[2,"tab-disabled",null],[2,"tab-hidden",null]],[[null,"ionSelect"],[null,"click"]],function(l,n,t){var a=!0,u=l.component;if("click"===n){a=!1!==r._11(l,1).onClick()&&a}if("ionSelect"===n){a=!1!==u.select(l.context.$implicit)&&a}return a},e,z)),r.Y(1,114688,null,0,A.a,[B.a,r.j,r.z],{tab:[0,"tab"]},{ionSelect:"ionSelect"})],function(l,n){l(n,1,0,n.context.$implicit)},function(l,n){l(n,0,1,[r._11(n,1).tab._btnId,r._11(n,1).tab._tabId,r._11(n,1).tab.isSelected,r._11(n,1).hasTitle,r._11(n,1).hasIcon,r._11(n,1).hasTitleOnly,r._11(n,1).hasIconOnly,r._11(n,1).hasBadge,r._11(n,1).disHover,!r._11(n,1).tab.enabled,!r._11(n,1).tab.show])})}function b(l){return r._22(0,[r._18(402653184,1,{_highlight:0}),r._18(402653184,2,{_tabbar:0}),r._18(402653184,3,{portal:0}),(l()(),r.Z(3,0,[[2,0],["tabbar",1]],null,4,"div",[["class","tabbar"],["role","tablist"]],null,null,null,null,null)),(l()(),r.U(16777216,null,null,1,null,i)),r.Y(5,802816,null,0,k.h,[r.I,r.F,r.p],{ngForOf:[0,"ngForOf"]},null),(l()(),r.Z(6,0,null,null,1,"div",[["class","tab-highlight"]],null,null,null,null,null)),r.Y(7,16384,[[1,4]],0,F.a,[r.j,E.a],null,null),r._10(null,0),(l()(),r.Z(9,16777216,[[3,3],["portal",1]],null,0,"div",[["tab-portal",""]],null,null,null,null,null))],function(l,n){l(n,5,0,n.component._tabs)},null)}function c(l){return r._22(0,[r._18(402653184,1,{_vp:0}),(l()(),r.Z(1,16777216,[[1,3],["viewport",1]],null,0,"div",[],null,null,null,null,null)),(l()(),r.Z(2,0,null,null,0,"div",[["class","nav-decor"]],null,null,null,null,null))],null,null)}function _(l){return r._22(0,[(l()(),r.Z(0,0,null,null,12,"ion-tabs",[],null,null,null,b,M)),r._16(6144,null,L.a,null,[R.a]),r.Y(2,4374528,null,0,R.a,[[2,O.a],[2,U.a],X.a,B.a,r.j,w.a,r.z,x.a,C.a],null,null),(l()(),r._20(-1,0,["\n  "])),(l()(),r.Z(4,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","home"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,c,J)),r.Y(5,245760,null,0,P.a,[R.a,X.a,B.a,w.a,r.j,r.u,r.z,r.i,r.g,$.l,H.a,[2,x.a],E.a,r.k],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),r._20(-1,0,["\n  "])),(l()(),r.Z(7,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","search"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,c,J)),r.Y(8,245760,null,0,P.a,[R.a,X.a,B.a,w.a,r.j,r.u,r.z,r.i,r.g,$.l,H.a,[2,x.a],E.a,r.k],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),r._20(-1,0,["\n  "])),(l()(),r.Z(10,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","cog"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,c,J)),r.Y(11,245760,null,0,P.a,[R.a,X.a,B.a,w.a,r.j,r.u,r.z,r.i,r.g,$.l,H.a,[2,x.a],E.a,r.k],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),r._20(-1,0,["\n"]))],function(l,n){var t=n.component;l(n,5,0,t.tab1Root,t.tab1Title,"home");l(n,8,0,t.tab2Root,t.tab2Title,"search");l(n,11,0,t.tab3Root,t.tab3Title,"cog")},function(l,n){l(n,4,0,r._11(n,5)._tabId,r._11(n,5)._btnId);l(n,7,0,r._11(n,8)._tabId,r._11(n,8)._btnId);l(n,10,0,r._11(n,11)._tabId,r._11(n,11)._btnId)})}Object.defineProperty(n,"__esModule",{value:!0});var r=t(0),s=(t(4),t(89)),d=(t(143),t(358)),f=function(){return function(l,n){var t=this;this.navCtrl=l,this.translateService=n,this.tab1Root=d.c,this.tab2Root=d.d,this.tab3Root=d.e,this.tab1Title=" ",this.tab2Title=" ",this.tab3Title=" ",n.get(["TAB1_TITLE","TAB2_TITLE","TAB3_TITLE"]).subscribe(function(l){t.tab1Title=l.TAB1_TITLE,t.tab2Title=l.TAB2_TITLE,t.tab3Title=l.TAB3_TITLE})}}(),T=function(){return function(){}}(),I=t(347),h=t(348),g=t(349),p=t(350),v=t(351),m=t(352),Z=t(353),y=t(354),Y=t(355),j=t(39),B=t(2),S=t(169),k=t(14),A=t(168),z=r.X({encapsulation:2,styles:[],data:{}}),F=t(104),E=t(11),L=t(30),R=t(97),O=t(22),U=t(6),X=t(10),w=t(5),x=t(16),C=t(26),M=r.X({encapsulation:2,styles:[],data:{}}),P=t(167),$=t(8),H=t(29),J=r.X({encapsulation:2,styles:[],data:{}}),N=t(28),V=r.X({encapsulation:2,styles:[],data:{}}),W=r.V("page-tabs",f,function(l){return r._22(0,[(l()(),r.Z(0,0,null,null,1,"page-tabs",[],null,null,null,_,V)),r.Y(1,49152,null,0,f,[O.a,N.a],null,null)],null,null)},{},{},[]),q=t(19),D=t(60),G=t(61),K=t(63),Q=t(62),ll=t(90),nl=t(145),tl=t(40);t.d(n,"TabsPageModuleNgFactory",function(){return al});var al=r.W(T,[],function(l){return r._7([r._8(512,r.i,r.S,[[8,[I.a,h.a,g.a,p.a,v.a,m.a,Z.a,y.a,Y.a,W]],[3,r.i],r.s]),r._8(4608,k.k,k.j,[r.r,[2,k.s]]),r._8(4608,q.u,q.u,[]),r._8(4608,q.d,q.d,[]),r._8(4608,D.b,D.a,[]),r._8(4608,G.a,G.b,[]),r._8(4608,K.b,K.a,[]),r._8(4608,Q.b,Q.a,[]),r._8(4608,N.a,N.a,[ll.a,D.b,G.a,K.b,Q.b,N.b,N.c]),r._8(512,k.b,k.b,[]),r._8(512,q.s,q.s,[]),r._8(512,q.g,q.g,[]),r._8(512,q.p,q.p,[]),r._8(512,nl.a,nl.a,[]),r._8(512,nl.b,nl.b,[]),r._8(512,s.a,s.a,[]),r._8(512,T,T,[]),r._8(256,tl.a,f,[]),r._8(256,N.c,void 0,[]),r._8(256,N.b,void 0,[])])})}});
+webpackJsonp([17],{
+
+/***/ 466:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactPageModule", function() { return ContactPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact__ = __webpack_require__(489);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(122);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var ContactPageModule = /** @class */ (function () {
+    function ContactPageModule() {
+    }
+    ContactPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__contact__["a" /* ContactPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__contact__["a" /* ContactPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__["b" /* TranslateModule */].forChild(),
+                __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__["a" /* PipesModule */]
+            ],
+        })
+    ], ContactPageModule);
+    return ContactPageModule;
+}());
+
+//# sourceMappingURL=contact.module.js.map
+
+/***/ }),
+
+/***/ 489:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(121);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the ContactPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ContactPage = /** @class */ (function () {
+    function ContactPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    ContactPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ContactPage');
+    };
+    ContactPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-contact',template:/*ion-inline-start:"C:\Users\Issam\superprojectV2\src\pages\contact\contact.html"*/'<ion-header>\n    <ion-navbar transparent>\n        <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title >{{ \'CONTACT\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<!--Content -->\n<ion-content elastic-header>\n    <ion-grid no-padding>\n        <ion-row>\n            <ion-col col-12 map-header>\n                <ion-item border no-lines no-padding>\n                    <!--Maps Title-->\n                    <h1 padding-left maps-title margin-top margin-bottom text-wrap>Centre d’action bénévole et communautaire Saint-Laurent</h1>\n                </ion-item>\n            </ion-col>\n            <!---Content-->\n            <ion-col col-12 map-content transparent>\n                <ion-item-group>\n                    <ion-item-divider no-lines>\n                        <h6  text-wrap margin-bottom><ion-icon name="map"></ion-icon>  910, avenue Sainte-Croix<br>\n                          Saint-Laurent, Québec<br>\n                          H4L 3Y6\n                          <a href=\'https://www.google.ca/maps/place/910+Avenue+Sainte-Croix,+Saint-Laurent,+QC+H4L+3Y6/@45.516031,-73.672814,15z/data=!4m5!3m4!1s0x4cc91841d25d2245:0xc0de0e045a32c4!8m2!3d45.5149408!4d-73.6781764?hl=fr\'>\n                            Voir sur la carte\n                        </a>\n                        </h6>\n\n                        <h6  text-wrap margin-bottom><ion-icon name="call"></ion-icon>  Tél. :\n  \n                          <a href=\'tel:+1-514-744-5511\'>\n                            514-744-5511\n                        </a>\n                        </h6>\n\n                        <h6  text-wrap margin-bottom><ion-icon name="call"></ion-icon>  Fax. :\n  \n                          <a href=\'tel:+1-514-744-1206\'>\n                              514-744-1206\n                        </a>\n                        </h6>\n\n\n                        \n\n\n<ion-item no-lines>\n    <p>Directrice générale<br>\n      <span color="light" maps-title>Henriette Konté</span> poste 223</p> \n</ion-item>\n\n                        <ion-item no-lines>\n                            <p>Responsable des communications<br>\n                              <span color="light" maps-title>Laurence Bouchard</span> poste 224 </p> \n    </ion-item> \n         \n    <ion-item no-lines>\n    <p  text-wrap>\n    Reponsable des bénévoles<br>\n    <span color="light" maps-title>Mélanie Massicotte</span> poste 222\n    </p>\n    </ion-item>\n    <ion-item no-lines>\n    <p  text-wrap> \n    Coordonnatrice des services aux bénévoles et aux bénéficiaires <br>\n    <span color="light" maps-title>Koné Djakaridja</span> poste 226 \n    </p> \n    </ion-item>\n    \n         \n    <ion-item no-lines>\n    <p  text-wrap> \n    Heures d\'ouverture:<br>\n    Lundi, Mardi, Mercredi, et Vendredi: de 8h à 17h30<br>\n    Jeudi: de 8h à 20h<br>\n    </p> \n    </ion-item>  \n                    </ion-item-divider>\n                    \n                </ion-item-group>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Issam\superprojectV2\src\pages\contact\contact.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
+    ], ContactPage);
+    return ContactPage;
+}());
+
+//# sourceMappingURL=contact.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=17.js.map
