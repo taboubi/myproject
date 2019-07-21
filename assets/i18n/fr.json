@@ -100,8 +100,12 @@
 
   "CARDS_TITLE": "Social",
   "MOREDETAIL": "En savoir plus",
+  "CANCEL_BUTTON": "Annuler",
 
   "SEARCH_TITLE": "Recherche",
   "UNVAILABLEEVENT": "Aucun événement disponible",
-  "UNVAILABLETRAINING": "Aucune formation disponible"
+  "UNVAILABLETRAINING": "Aucune formation disponible",
+  "NBHOURSPERMONTH": "Nombre d’heures par mois",
+  "ENTERPERMONTH": "Saisir par mois",
+  "TOTALNBHOURS": "Nombre d'heures totales"
 }
