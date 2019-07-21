@@ -261,12 +261,12 @@ var ItemDetailPage = /** @class */ (function () {
         }, function (err) {
             console.error('ERROR', err);
         }, function () { loading.dismiss(); });
-        //this.viewCtrl.showBackButton(true);
+        this.viewCtrl.showBackButton(true);
         this.showmonths = false;
     };
     ItemDetailPage.prototype.cancel = function () {
         this.showmonths = false;
-        //this.viewCtrl.showBackButton(true);
+        this.viewCtrl.showBackButton(true);
     };
     ItemDetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
