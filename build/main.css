@@ -33104,6 +33104,10 @@ page-item-detail .nbhours {
   margin-top: 45px !important;
 }
 
+page-item-detail .monthscontainer {
+  margin-bottom: 35px;
+}
+
 page-item-detail .monthscontainer [box-shadow] {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
